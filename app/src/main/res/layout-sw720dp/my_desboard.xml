@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:background="@drawable/background"
+    >
+
+    <LinearLayout
+        android:layout_marginRight="10dp"
+        android:gravity="bottom"
+        android:layout_weight="0.10"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:weightSum="1"
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.90">
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lout_logout"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.10"
+            android:weightSum="1">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.35"
+                android:src="@drawable/logout_s"/>
+            <Custom.Custom_Font_TextView
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/Blue"
+                android:textSize="14sp"
+                android:layout_width="0dp"
+                android:layout_weight="0.65"
+                android:layout_height="wrap_content"
+                android:text="Logout"/>
+
+        </LinearLayout>
+            </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_weight="0.30"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:src="@drawable/mainlogo_hh"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_weight="0.25"
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.15"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/single_stone_search"
+            android:layout_width="0dp"
+            android:layout_weight="0.15"
+            android:gravity="center_horizontal"
+            android:weightSum="1"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.80"
+                android:src="@drawable/single_stone"/>
+
+            <Custom.Custom_Font_TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_weight="0.20"
+                android:text="SINGLE STONE\nSEARCH"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fancy_color_search"
+            android:layout_width="0dp"
+            android:layout_weight="0.15"
+            android:gravity="center_horizontal"
+            android:weightSum="1"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.80"
+            android:src="@drawable/fancy_color_stone"/>
+
+            <Custom.Custom_Font_TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:layout_weight="0.20"
+                android:text="FANCY COLOR\nSEARCH"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/quick_search"
+            android:layout_width="0dp"
+            android:layout_weight="0.15"
+            android:gravity="center_horizontal"
+            android:weightSum="1"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.80"
+            android:src="@drawable/quick_search"/>
+
+        <Custom.Custom_Font_TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.20"
+            android:text="QUICK SEARCH"
+            android:textSize="15sp"/>
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/new_arrival"
+            android:layout_width="0dp"
+            android:layout_weight="0.15"
+            android:gravity="center_horizontal"
+            android:weightSum="1"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.80"
+            android:src="@drawable/new_arrival"/>
+
+        <Custom.Custom_Font_TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.20"
+            android:text="NEW ARRIVAL"
+            android:textSize="15sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bgm_stones"
+            android:layout_width="0dp"
+            android:layout_weight="0.15"
+            android:gravity="center_horizontal"
+            android:weightSum="1"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.80"
+            android:src="@drawable/bgmstone"/>
+
+        <Custom.Custom_Font_TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.20"
+            android:text="BGM STONES"
+            android:textSize="15sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.10"></LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="0.25"
+        android:weightSum="1"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.15"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/revised_price"
+            android:layout_width="0dp"
+            android:layout_weight="0.15"
+            android:gravity="center_horizontal"
+            android:weightSum="1"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.80"
+                android:src="@drawable/revised_prise"/>
+
+            <Custom.Custom_Font_TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="0.20"
+                android:text="REVISED PRICE"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tracked_stones"
+            android:layout_width="0dp"
+            android:layout_weight="0.15"
+            android:gravity="center_horizontal"
+            android:weightSum="1"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.80"
+                android:src="@drawable/track_stone"/>
+
+            <Custom.Custom_Font_TextView
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="0.20"
+                android:text="MY TRACKED\nSTONES(S)"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/my_cart"
+            android:layout_width="0dp"
+            android:layout_weight="0.15"
+            android:gravity="center_horizontal"
+            android:weightSum="1"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.80"
+                android:src="@drawable/my_cart"/>
+
+            <Custom.Custom_Font_TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="0.20"
+                android:text="MY CART"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/my_offers"
+            android:layout_width="0dp"
+            android:layout_weight="0.15"
+            android:gravity="center_horizontal"
+            android:weightSum="1"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.80"
+                android:src="@drawable/my_offers"/>
+
+            <Custom.Custom_Font_TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="0.20"
+                android:text="MY OFFERS"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/my_purchase"
+            android:layout_width="0dp"
+            android:layout_weight="0.15"
+            android:gravity="center_horizontal"
+            android:weightSum="1"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.80"
+                android:src="@drawable/my_purchases"/>
+
+            <Custom.Custom_Font_TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="0.20"
+                android:text="MY PURCHASE"
+                android:textSize="15sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.10"></LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="0.10"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"></LinearLayout>
+
+</LinearLayout>

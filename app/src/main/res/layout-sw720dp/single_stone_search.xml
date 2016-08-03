@@ -1,0 +1,1729 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_ld_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:src="@drawable/advance_logo" />
+
+        <Custom.Custom_Font_TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Single Stone Serach"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_home"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:drawableTop="@drawable/homebutton"
+                android:text="Home"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btn_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:drawableTop="@drawable/logout_s"
+                android:text="Logout"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.75"
+                        android:background="@drawable/dilog_border_gradient"
+                        android:orientation="vertical">
+
+                        <Custom.Custom_Font_TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Shapes"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/Btn_TxtSize_720dp"
+                            android:textStyle="bold" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recView_shape"
+                            android:layout_width="wrap_content"
+                            android:layout_height="80dp"
+                            android:background="#00000000" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.25"
+                        android:background="@drawable/dilog_border_gradient"
+                        android:orientation="vertical">
+
+                        <Custom.Custom_Font_TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lab"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/Btn_TxtSize_720dp"
+                            android:textStyle="bold" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recView_lab"
+                            android:layout_width="wrap_content"
+                            android:layout_height="80dp"
+                            android:background="#00000000" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="425dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.35"
+                            android:orientation="vertical"
+                            android:weightSum="1">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/dilog_border_gradient"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <Custom.Custom_Font_TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center|left"
+                                        android:text="Carat"
+                                        android:textColor="@color/black"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <CheckBox
+                                        android:id="@+id/chb_white"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:button="@drawable/ch_box"
+                                        android:gravity="center|left"
+                                        android:text=" White"
+                                        android:checked="true"
+                                        android:textColor="#751013"
+                                        android:textSize="16sp" />
+
+                                    <CheckBox
+                                        android:id="@+id/chb_fancy"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:button="@drawable/ch_box"
+                                        android:gravity="center|left"
+                                        android:text=" Fancy Color"
+                                        android:textColor="#751013"
+                                        android:textSize="16sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:orientation="horizontal">
+
+                                    <Custom.Custom_Edittext
+                                        android:id="@+id/edit_carat_f"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/edittext_rounded_border"
+                                        android:hint=" From"
+                                        android:paddingLeft="5dp" />
+
+                                    <Custom.Custom_Edittext
+                                        android:id="@+id/edit_carat_t"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/edittext_rounded_border"
+                                        android:hint=" To"
+                                        android:paddingLeft="5dp" />
+
+                                    <ImageView
+                                        android:id="@+id/img_carat_size"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:layout_marginLeft="10dp"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/advancesearch_sizeplus" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/dilog_border_gradient"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp">
+
+                                        <Custom.Custom_Font_TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center|left"
+                                            android:text="Cut"
+                                            android:textColor="#000000"
+                                            android:textSize="@dimen/Btn_TxtSize_720dp"
+                                            android:textStyle="bold" />
+
+                                        <CheckBox
+                                            android:id="@+id/chb_3x"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="30dp"
+                                            android:button="@drawable/ch_box"
+                                            android:text=" 3X"
+                                            android:textColor="#751013"
+                                            android:textStyle="bold" />
+
+                                        <CheckBox
+                                            android:id="@+id/chb_2x"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="30dp"
+                                            android:button="@drawable/ch_box"
+                                            android:text=" 2X"
+                                            android:textColor="#751013"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                    <android.support.v7.widget.RecyclerView
+                                        android:id="@+id/recView_cut"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="80dp"
+                                        android:background="#00000000" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <Custom.Custom_Font_TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center|left"
+                                        android:text="Polish"
+                                        android:textColor="#000000"
+                                        android:textSize="@dimen/Btn_TxtSize_720dp"
+                                        android:textStyle="bold" />
+
+                                    <android.support.v7.widget.RecyclerView
+                                        android:id="@+id/recView_polish"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="80dp"
+                                        android:background="#00000000" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <Custom.Custom_Font_TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center|left"
+                                        android:text="Sym"
+                                        android:textColor="#000000"
+                                        android:textSize="@dimen/Btn_TxtSize_720dp"
+                                        android:textStyle="bold" />
+
+                                    <android.support.v7.widget.RecyclerView
+                                        android:id="@+id/recView_sym"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="80dp"
+                                        android:background="#00000000" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.65"
+                            android:orientation="vertical"
+                            android:weightSum="1">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="0.50"
+                                android:background="@drawable/dilog_border_gradient"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <CheckBox
+                                        android:id="@+id/cb_no_bgm"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:button="@drawable/ch_box"
+                                        android:gravity="center|left"
+                                        android:text=" No BGM"
+                                        android:textColor="#751013"
+                                        android:textSize="16sp" />
+
+                                    <CheckBox
+                                        android:id="@+id/cb_only_bgm"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:button="@drawable/ch_box"
+                                        android:gravity="center|left"
+                                        android:text=" Only BGM"
+                                        android:textColor="#751013"
+                                        android:textSize="16sp" />
+
+                                    <CheckBox
+                                        android:id="@+id/cb_only_brown"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:button="@drawable/ch_box"
+                                        android:gravity="center|left"
+                                        android:text=" Only Brown"
+                                        android:textColor="#751013"
+                                        android:textSize="16sp" />
+
+                                    <CheckBox
+                                        android:id="@+id/cb_only_green"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:button="@drawable/ch_box"
+                                        android:gravity="center|left"
+                                        android:text=" Only Green"
+                                        android:textColor="#751013"
+                                        android:textSize="16sp" />
+
+                                    <CheckBox
+                                        android:id="@+id/cb_only_milky"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:button="@drawable/ch_box"
+                                        android:gravity="center|left"
+                                        android:text=" Only Milky"
+                                        android:textColor="#751013"
+                                        android:textSize="16sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/lout_for_white"
+                                    android:visibility="gone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="horizontal">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+
+                                            <Custom.Custom_Font_TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Intensity"
+                                                android:textColor="#000000"
+                                                android:textSize="@dimen/Btn_TxtSize_720dp"
+                                                android:textStyle="bold" />
+
+                                            <Custom.Custom_Edittext
+                                                android:id="@+id/edit_intensity"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:background="@drawable/long_dropdown"
+                                                android:focusable="false"
+                                                android:focusableInTouchMode="false"
+                                                android:hint=" Select Fancy Intensity"
+                                                android:paddingLeft="15dp"
+                                                android:textSize="15sp" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+
+                                            <Custom.Custom_Font_TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Overtone"
+                                                android:textColor="#000000"
+                                                android:textSize="@dimen/Btn_TxtSize_720dp"
+                                                android:textStyle="bold" />
+
+                                            <Custom.Custom_Edittext
+                                                android:id="@+id/edit_overtone"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:background="@drawable/long_dropdown"
+                                                android:focusable="false"
+                                                android:focusableInTouchMode="false"
+                                                android:hint=" Select Fancy Overtone"
+                                                android:paddingLeft="15dp"
+                                                android:textSize="15sp" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_weight="1"
+                                            android:orientation="vertical">
+
+                                            <Custom.Custom_Font_TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Color"
+                                                android:textColor="#000000"
+                                                android:textSize="@dimen/Btn_TxtSize_720dp"
+                                                android:textStyle="bold" />
+
+                                            <Custom.Custom_Edittext
+                                                android:id="@+id/edit_color"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:background="@drawable/long_dropdown"
+                                                android:focusable="false"
+                                                android:focusableInTouchMode="false"
+                                                android:hint=" Select Fancy Color"
+                                                android:paddingLeft="15dp"
+                                                android:textSize="15sp" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/lout_for_fancy"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <Custom.Custom_Font_TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center|left"
+                                        android:text="Color"
+                                        android:textColor="#000000"
+                                        android:textSize="@dimen/Btn_TxtSize_720dp"
+                                        android:textStyle="bold" />
+
+                                    <android.support.v7.widget.RecyclerView
+                                        android:id="@+id/recView_color"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="80dp"
+                                        android:background="#00000000" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <Custom.Custom_Font_TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center|left"
+                                        android:text="Clarity"
+                                        android:textColor="#000000"
+                                        android:textSize="@dimen/Btn_TxtSize_720dp"
+                                        android:textStyle="bold" />
+
+                                    <android.support.v7.widget.RecyclerView
+                                        android:id="@+id/recView_clarity"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="80dp"
+                                        android:background="#00000000" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="0.50"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.60"
+                                    android:background="@drawable/dilog_border_gradient"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <Custom.Custom_Font_TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center|left"
+                                            android:text="Fluorescence Intensity"
+                                            android:textColor="#000000"
+                                            android:textSize="@dimen/Btn_TxtSize_720dp"
+                                            android:textStyle="bold" />
+
+                                        <android.support.v7.widget.RecyclerView
+                                            android:id="@+id/recView_f_intensity"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="80dp"
+                                            android:background="#00000000" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <Custom.Custom_Font_TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center|left"
+                                            android:text="Fluorescence Color"
+                                            android:textColor="#000000"
+                                            android:textSize="@dimen/Btn_TxtSize_720dp"
+                                            android:textStyle="bold" />
+
+                                        <android.support.v7.widget.RecyclerView
+                                            android:id="@+id/recView_f_color"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="80dp"
+                                            android:background="#00000000" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_weight="0.40"
+                                    android:background="@drawable/dilog_border_gradient">
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+                                        <Custom.Custom_Font_TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Price/cts USD"
+                                            android:textColor="@color/black"
+                                            android:textSize="20sp"
+                                            android:textStyle="bold" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="40dp"
+                                            android:layout_marginTop="2dp"
+                                            android:layout_weight="1"
+                                            android:orientation="horizontal">
+
+                                            <Custom.Custom_Edittext
+                                                android:id="@+id/edit_usd_f"
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1"
+                                                android:background="@drawable/edittext_rounded_border"
+                                                android:hint=" From ($)"
+                                                android:inputType="number"
+                                                android:paddingLeft="5dp" />
+
+                                            <Custom.Custom_Edittext
+                                                android:id="@+id/edit_usd_t"
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginLeft="5dp"
+                                                android:layout_weight="1"
+                                                android:background="@drawable/edittext_rounded_border"
+                                                android:hint=" To ($)"
+                                                android:inputType="number" />
+                                        </LinearLayout>
+
+                                        <Custom.Custom_Font_TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Total Amount USD"
+                                            android:textColor="@color/black"
+                                            android:textSize="20sp"
+                                            android:textStyle="bold" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="40dp"
+                                            android:layout_marginTop="2dp"
+                                            android:layout_weight="1"
+                                            android:orientation="horizontal">
+
+                                            <Custom.Custom_Edittext
+                                                android:id="@+id/edit_total_usd_f"
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1"
+                                                android:background="@drawable/edittext_rounded_border"
+                                                android:hint=" From ($)"
+                                                android:inputType="number" />
+
+                                            <Custom.Custom_Edittext
+                                                android:id="@+id/edit_total_usd_t"
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginLeft="5dp"
+                                                android:layout_weight="1"
+                                                android:background="@drawable/edittext_rounded_border"
+                                                android:hint=" To ($)"
+                                                android:inputType="number" />
+                                        </LinearLayout>
+
+                                        <Custom.Custom_Font_TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Discount %"
+                                            android:textColor="@color/black"
+                                            android:textSize="20sp"
+                                            android:textStyle="bold" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="40dp"
+                                            android:layout_marginTop="2dp"
+                                            android:layout_weight="1"
+                                            android:orientation="horizontal">
+
+                                            <Custom.Custom_Edittext
+                                                android:id="@+id/edit_discount_f"
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1"
+                                                android:background="@drawable/edittext_rounded_border"
+                                                android:hint=" From ($)"
+                                                android:inputType="number" />
+
+                                            <Custom.Custom_Edittext
+                                                android:id="@+id/edit_discount_t"
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginLeft="5dp"
+                                                android:layout_weight="1"
+                                                android:background="@drawable/edittext_rounded_border"
+                                                android:hint=" To ($)"
+                                                android:inputType="number" />
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/dilog_border_gradient"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <Custom.Custom_Font_TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Stone ID:"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_stone_id"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="1dp"
+                                android:background="@drawable/edittext_rounded_border"
+                                android:hint=" Stone ID"
+                                android:paddingLeft="5dp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <Custom.Custom_Font_TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Certi No"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_certi_no"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="1dp"
+                                android:background="@drawable/edittext_rounded_border"
+                                android:hint=" Certi No"
+                                android:paddingLeft="5dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <Custom.Custom_Font_TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Rapnet Lot No:"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_lot_no"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="1dp"
+                                android:background="@drawable/edittext_rounded_border"
+                                android:hint=" Rapnet Lot No"
+                                android:paddingLeft="5dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical">
+
+                            <Custom.Custom_Font_TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Country"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_sss_country"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="1dp"
+                                android:background="@drawable/long_dropdown"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:hint=" Country"
+                                android:paddingLeft="15dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/dilog_border_gradient"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.45"
+                    android:gravity="center_vertical">
+
+                    <Custom.Custom_Font_TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Trade Show :"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <Custom.Custom_Edittext
+                        android:id="@+id/edit_trade"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/long_dropdown"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint=" Trad Show"
+                        android:paddingLeft="15dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.10"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.45"
+                    android:orientation="horizontal">
+
+                    <Custom.Custom_Button
+                        android:id="@+id/btn_reset"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.20"
+                        android:background="@drawable/greenbutton"
+                        android:text="Reset"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <Custom.Custom_Button
+                        android:id="@+id/btn_ad_search"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.40"
+                        android:background="@drawable/button_qs"
+                        android:text="Advance search"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <Custom.Custom_Button
+                        android:id="@+id/btn_search_stone"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.40"
+                        android:background="@drawable/button_qs"
+                        android:text="Search Stone"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/lout_adav"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/dilog_border_gradient"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <Custom.Custom_Font_TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Diameter"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/Btn_TxtSize_720dp"
+                                android:textStyle="bold" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_diameter_f"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_rounded_border"
+                                android:hint=" From"
+                                android:inputType="number"
+                                android:paddingLeft="5dp" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_diameter_t"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_rounded_border"
+                                android:hint=" To"
+                                android:inputType="number"
+                                android:paddingLeft="5dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1">
+
+                            <Custom.Custom_Font_TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Total Depth"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/Btn_TxtSize_720dp"
+                                android:textStyle="bold" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_total_depth_f"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_rounded_border"
+                                android:hint=" From (%)"
+                                android:inputType="number"
+                                android:paddingLeft="5dp" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_total_depth_t"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_rounded_border"
+                                android:hint=" To(%)"
+                                android:inputType="number"
+                                android:paddingLeft="5dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1">
+
+                            <Custom.Custom_Font_TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Table(%)"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/Btn_TxtSize_720dp"
+                                android:textStyle="bold" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_total_f"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_rounded_border"
+                                android:hint=" From (%)"
+                                android:inputType="number"
+                                android:paddingLeft="5dp" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_total_t"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_rounded_border"
+                                android:hint=" To(%)"
+                                android:inputType="number"
+                                android:paddingLeft="5dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1">
+
+                            <Custom.Custom_Font_TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Crown Height\n(%)"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/Btn_TxtSize_720dp"
+                                android:textStyle="bold" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_crown_h_f"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_rounded_border"
+                                android:hint=" From (%)"
+                                android:inputType="number"
+                                android:paddingLeft="5dp" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_crown_h_t"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_rounded_border"
+                                android:hint=" To(%)"
+                                android:inputType="number"
+                                android:paddingLeft="5dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1">
+
+                            <Custom.Custom_Font_TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Crown Angle"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/Btn_TxtSize_720dp"
+                                android:textStyle="bold" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_crown_a_f"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_rounded_border"
+                                android:hint=" From"
+                                android:inputType="number"
+                                android:paddingLeft="5dp" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_crown_a_t"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_rounded_border"
+                                android:hint=" To"
+                                android:inputType="number"
+                                android:paddingLeft="5dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1">
+
+                            <Custom.Custom_Font_TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Pav Height"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/Btn_TxtSize_720dp"
+                                android:textStyle="bold" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_pav_h_f"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_rounded_border"
+                                android:hint=" From (%)"
+                                android:inputType="number"
+                                android:paddingLeft="5dp" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_pav_h_t"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_rounded_border"
+                                android:hint=" To(%)"
+                                android:inputType="number"
+                                android:paddingLeft="5dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1">
+
+                            <Custom.Custom_Font_TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Pav Angle"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/Btn_TxtSize_720dp"
+                                android:textStyle="bold" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_pav_a_f"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_rounded_border"
+                                android:hint=" From"
+                                android:inputType="number"
+                                android:paddingLeft="5dp" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_pav_a_t"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_rounded_border"
+                                android:hint=" To"
+                                android:inputType="number"
+                                android:paddingLeft="5dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1">
+
+                            <Custom.Custom_Font_TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Girdle(%)"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/Btn_TxtSize_720dp"
+                                android:textStyle="bold" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_girdle_f"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_rounded_border"
+                                android:hint=" From (%)"
+                                android:inputType="number"
+                                android:paddingLeft="5dp" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_girdle_t"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_rounded_border"
+                                android:hint=" To(%)"
+                                android:inputType="number"
+                                android:paddingLeft="5dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1">
+
+                            <Custom.Custom_Font_TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Ratio(%)"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/Btn_TxtSize_720dp"
+                                android:textStyle="bold" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_ratio_f"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_rounded_border"
+                                android:hint=" From (%)"
+                                android:inputType="number"
+                                android:paddingLeft="5dp" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_ratio_t"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_rounded_border"
+                                android:hint=" To(%)"
+                                android:inputType="number"
+                                android:paddingLeft="5dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/dilog_border_gradient"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <Custom.Custom_Font_TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tinge"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/Btn_TxtSize_720dp"
+                                android:textStyle="bold" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_tinge"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/long_dropdown"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:hint=" Select Tinge"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <Custom.Custom_Font_TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Table Inclusion"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/Btn_TxtSize_720dp"
+                                android:textStyle="bold" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_tbl_inclusion"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/long_dropdown"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:hint=" Select Table Inclusion"
+                                android:paddingLeft="15dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <Custom.Custom_Font_TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Side Inclusion"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/Btn_TxtSize_720dp"
+                                android:textStyle="bold" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_side_inclusion"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/long_dropdown"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:hint=" Select Side Inclusion"
+                                android:paddingLeft="15dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <Custom.Custom_Font_TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Open Inclusion"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/Btn_TxtSize_720dp"
+                                android:textStyle="bold" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_open_inclusion"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/long_dropdown"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:hint=" Select Open Inclusion"
+                                android:paddingLeft="15dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <Custom.Custom_Font_TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Cavity"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/Btn_TxtSize_720dp"
+                                android:textStyle="bold" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_cavity"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/long_dropdown"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:hint=" Select Cavity"
+                                android:paddingLeft="15dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <Custom.Custom_Font_TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Natural"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/Btn_TxtSize_720dp"
+                                android:textStyle="bold" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_natural"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/long_dropdown"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:hint=" Select Natural"
+                                android:paddingLeft="15dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <Custom.Custom_Font_TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Indented Natural"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/Btn_TxtSize_720dp"
+                                android:textStyle="bold" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_inden_natural"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/long_dropdown"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:hint=" Select Indented Natural"
+                                android:paddingLeft="15dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/dilog_border_gradient"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <Custom.Custom_Font_TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Milky"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/Btn_TxtSize_720dp"
+                                android:textStyle="bold" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_milky"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/long_dropdown"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:hint=" Select Milky"
+                                android:paddingLeft="15dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <Custom.Custom_Font_TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Luster"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/Btn_TxtSize_720dp"
+                                android:textStyle="bold" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_luster"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/long_dropdown"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:hint=" Select Luster"
+                                android:paddingLeft="15dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <Custom.Custom_Font_TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Extra Facet"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/Btn_TxtSize_720dp"
+                                android:textStyle="bold" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_extra_facet"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/long_dropdown"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:hint=" Select Extra Facet"
+                                android:paddingLeft="15dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <Custom.Custom_Font_TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Girdle"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/Btn_TxtSize_720dp"
+                                android:textStyle="bold" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_girdle"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/long_dropdown"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:hint=" Select Girdle"
+                                android:paddingLeft="15dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <Custom.Custom_Font_TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Heart &amp; Arrow"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/Btn_TxtSize_720dp"
+                                android:textStyle="bold" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_heart_arrow"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/long_dropdown"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:hint=" Select Heart &amp; Arrow"
+                                android:paddingLeft="15dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <Custom.Custom_Font_TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Eye Clean"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/Btn_TxtSize_720dp"
+                                android:textStyle="bold" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_eye_clean"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/long_dropdown"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:hint=" Select Eye Clean"
+                                android:paddingLeft="15dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <Custom.Custom_Font_TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Culet"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/Btn_TxtSize_720dp"
+                                android:textStyle="bold" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_culet"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/long_dropdown"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:hint=" Select Culet"
+                                android:paddingLeft="15dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <Custom.Custom_Font_TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Graining"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/Btn_TxtSize_720dp"
+                                android:textStyle="bold" />
+
+                            <Custom.Custom_Edittext
+                                android:id="@+id/edit_graining"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/long_dropdown"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:hint=" Select Graining"
+                                android:paddingLeft="15dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

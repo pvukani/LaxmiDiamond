@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom"
+    android:background="@drawable/temp">
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Custom.Custom_Font_TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="parth"
+            android:textSize="@dimen/Btn_TxtSize_720dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:id="@+id/txt_popup_title" />
+
+        <Custom.Custom_Button
+            android:layout_width="29dp"
+            android:layout_height="29dp"
+            android:padding="5dp"
+            android:background="@drawable/close"
+            android:id="@+id/btn_pop_close" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recy_fancy_data"
+        android:divider="#d1d1d1"
+        android:dividerHeight="1dp"
+        android:background="@android:color/transparent"
+        android:layout_weight="1"/>
+
+    <Custom.Custom_Button
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ok"
+        android:background="@drawable/button_qs"
+        android:textColor="@color/white"
+        android:id="@+id/btn_pop_ok"
+        android:padding="5dp"/>
+</LinearLayout>

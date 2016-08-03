@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">LaxmiDiamond</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_activity_desboard">activity_desboard</string>
+    <string name="title_activity_navigation__home">Navigation_Home</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_navi__home">Navi_Home</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_activity_test">test</string>
+    <string name="title_activity_result__diamond_search">Result_DiamondSearch</string>
+    <string name="title_activity_quick_search">Quick_search</string>
+
+</resources>

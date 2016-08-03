@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <color name="colorPrimary">@color/label_color</color>
+    <color name="colorPrimaryDark">@color/label_color</color>
+    <color name="colorAccent">@color/label_color</color>
+
+
+    <color name="black">#ff000000</color>
+    <color name="white">#ffffffff</color>
+    <color name="login_link_textview">#ffd7df01</color>
+    <color name="label_color">#ff215c8c</color>
+    <color name="login_bgcolor">#ff81daf5</color>
+    <color name="login_textcolor">#fffbf5ef</color>
+    <color name="transparent_color">#00000000</color>
+    <color name="moddle_diamond_color">#ff4ac0ff</color>
+    <color name="cell_background">#ff6cb5ea</color>
+    <color name="pink">#fff08080</color>
+    <color name="maroon">#ff505050</color>
+    <color name="red">#ffff0000</color>
+    <color name="framelayout">#ffaddfff</color>
+    <color name="Blue">#ff086a87</color>
+    <color name="theme_blue">#061E4E</color>
+    <color name="header_blue">#273468</color>
+    <color name="light_purple">#D9DDEB</color>
+    <color name="devider_color">#C9C9C9</color>
+    <color name="quick_search_button_color">#A4A4A4</color>
+    <color  name="Gray">#A4A4A4</color>
+    <color name="text_color">#61859A</color>
+    <color name="listview_header">#5d6895</color>
+    <color name="my">#C8E6FF</color>
+</resources>

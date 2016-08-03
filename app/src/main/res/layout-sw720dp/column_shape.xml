@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:id="@+id/lout_shape">
+
+    <Custom.Custom_Font_TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Round"
+        android:textColor="@color/black"
+        android:textSize="@dimen/Btn_TxtSize_720dp"
+        android:id="@+id/shape_name" />
+
+    <ImageView
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/round"
+        android:id="@+id/image_shape" />
+</LinearLayout>

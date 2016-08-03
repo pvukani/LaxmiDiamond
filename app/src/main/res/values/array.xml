@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="img_shape">
+        <item>@drawable/round</item>
+        <item>@drawable/cushion</item>
+        <item>@drawable/princess</item>
+        <item>@drawable/marquise</item>
+        <item>@drawable/pear</item>
+        <item>@drawable/heart</item>
+        <item>@drawable/oval</item>
+        <item>@drawable/emerald</item>
+        <item>@drawable/radiant</item>
+        <item>@drawable/other</item>
+    </array>
+
+    <array name="img_shape_select">
+        <item>@drawable/round_f</item>
+        <item>@drawable/cushion_f</item>
+        <item>@drawable/princess_f</item>
+        <item>@drawable/marquise_f</item>
+        <item>@drawable/pear_f</item>
+        <item>@drawable/heart_f</item>
+        <item>@drawable/oval_f</item>
+        <item>@drawable/emerald_f</item>
+        <item>@drawable/radiant_f</item>
+        <item>@drawable/other_f</item>
+    </array>
+
+    <array name="img_lab">
+        <item>@drawable/gia</item>
+        <item>@drawable/igi</item>
+        <item>@drawable/hrd</item>
+        <item>@drawable/egl</item>
+    </array>
+
+    <array name="img_lab_select">
+        <item>@drawable/gia_select</item>
+        <item>@drawable/igi_select</item>
+        <item>@drawable/hrd_select</item>
+        <item>@drawable/egl_select</item>
+    </array>
+    <array name="diamond_cut_polish_sym_default">
+        <item>@drawable/id</item>
+        <item>@drawable/ex</item>
+        <item>@drawable/vg</item>
+        <item>@drawable/gd</item>
+        <item>@drawable/fr</item>
+        <item>@drawable/pr</item>
+    </array>
+    <array name="diamond_cut_polish_sym_selected">
+        <item>@drawable/id_hover</item>
+        <item>@drawable/ex_hover</item>
+        <item>@drawable/vg_hover</item>
+        <item>@drawable/gd_hover</item>
+        <item>@drawable/fr_hover</item>
+        <item>@drawable/pr_hover</item>
+    </array>
+    <array name="diamond_clarity_default">
+        <item>@drawable/fl</item>
+        <item>@drawable/if_</item>
+        <item>@drawable/vvs1</item>
+        <item>@drawable/vvs2</item>
+        <item>@drawable/vs1</item>
+        <item>@drawable/vs2</item>
+        <item>@drawable/si1</item>
+        <item>@drawable/si2</item>
+        <item>@drawable/si3</item>
+        <item>@drawable/i1</item>
+        <item>@drawable/i2</item>
+        <item>@drawable/i3</item>
+    </array>
+    <array name="diamond_clarity_selected">
+        <item>@drawable/fl_hover</item>
+        <item>@drawable/if_hover</item>
+        <item>@drawable/vvs1_hover</item>
+        <item>@drawable/vvs2_hover</item>
+        <item>@drawable/vs1_hover</item>
+        <item>@drawable/vs2_hover</item>
+        <item>@drawable/si1_hover</item>
+        <item>@drawable/si2_hover</item>
+        <item>@drawable/si3_hover</item>
+        <item>@drawable/i1_hover</item>
+        <item>@drawable/i2_hover</item>
+        <item>@drawable/i3_hover</item>
+    </array>
+    <array name="diamond_f_c_default">
+        <item>@drawable/blue</item>
+        <item>@drawable/yellow</item>
+        <item>@drawable/green</item>
+        <item>@drawable/white</item>
+    </array>
+    <array name="diamond_f_c_selected">
+        <item>@drawable/blue_hover</item>
+        <item>@drawable/yellow_hover</item>
+        <item>@drawable/green_hover</item>
+        <item>@drawable/white_hover</item>
+    </array>
+    <array name="diamond_f_i_default">
+        <item>@drawable/none</item>
+        <item>@drawable/vslight</item>
+        <item>@drawable/faint</item>
+        <item>@drawable/medium</item>
+        <item>@drawable/strong</item>
+        <item>@drawable/vstrong</item>
+    </array>
+    <array name="diamond_f_i_selected">
+        <item>@drawable/none_hover</item>
+        <item>@drawable/vslight_hover</item>
+        <item>@drawable/faint_hover</item>
+        <item>@drawable/medium_hover</item>
+        <item>@drawable/strong_hover</item>
+        <item>@drawable/vstrong_hover</item>
+    </array>
+    <array name="diamond_color_default">
+        <item>@drawable/d</item>
+        <item>@drawable/e</item>
+        <item>@drawable/f</item>
+        <item>@drawable/g</item>
+        <item>@drawable/h</item>
+        <item>@drawable/i</item>
+        <item>@drawable/j</item>
+        <item>@drawable/k</item>
+        <item>@drawable/l</item>
+        <item>@drawable/m</item>
+        <item>@drawable/n</item>
+        <item>@drawable/o_p</item>
+    </array>
+    <array name="diamond_color_selected">
+        <item>@drawable/d_hover</item>
+        <item>@drawable/e_hover</item>
+        <item>@drawable/f_hover</item>
+        <item>@drawable/g_hover</item>
+        <item>@drawable/h_hover</item>
+        <item>@drawable/i_hover</item>
+        <item>@drawable/j_hover</item>
+        <item>@drawable/k_hover</item>
+        <item>@drawable/l_hover</item>
+        <item>@drawable/m_hover</item>
+        <item>@drawable/n_hover</item>
+        <item>@drawable/o_p_hover</item>
+    </array>
+    <string-array name="diamond_color_names">
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>J</item>
+        <item>K</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>O-P</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="fancy_color_array">
+        <item>Yellow</item>
+        <item>Pink</item>
+        <item>Blue</item>
+        <item>Red</item>
+        <item>Green</item>
+        <item>Purple</item>
+        <item>Orange</item>
+        <item>Violet</item>
+        <item>Gray</item>
+        <item>Black</item>
+        <item>Brown</item>
+        <item>Champagne</item>
+        <item>Cognac</item>
+        <item>Chameleon</item>
+        <item>White</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="fancy_color_array_val">
+        <item>103</item>
+        <item>99</item>
+        <item>92</item>
+        <item>101</item>
+        <item>97</item>
+        <item>100</item>
+        <item>98</item>
+        <item>102</item>
+        <item>96</item>
+        <item>91</item>
+        <item>93</item>
+        <item>94</item>
+        <item>95</item>
+        <item>352</item>
+        <item>104</item>
+        <item>105</item>
+    </string-array>
+    <string-array name="fancy_overtone">
+        <item>None</item>
+        <item>Brownish</item>
+        <item>Greenish</item>
+        <item>Yellowish</item>
+        <item>Pinkish</item>
+        <item>Purplish</item>
+        <item>Grayish</item>
+        <item>Orangey</item>
+        <item>Reddish</item>
+        <item>Bluish</item>
+    </string-array>
+    <string-array name="fancy_overtone_val">
+        <item>354</item>
+        <item>115</item>
+        <item>116</item>
+        <item>117</item>
+        <item>118</item>
+        <item>119</item>
+        <item>120</item>
+        <item>121</item>
+        <item>122</item>
+        <item>123</item>
+    </string-array>
+    <string-array name="fancy_intensity">
+        <item>Faint</item>
+        <item>Very Light</item>
+        <item>Fancy Light</item>
+        <item>Fancy Dark</item>
+        <item>Fancy Intense</item>
+        <item>Fancy Vivid</item>
+        <item>Fancy Deep</item>
+        <item>Fancy</item>
+        <item>Light</item>
+    </string-array>
+    <string-array name="fancy_intensity_val">
+        <item>106</item>
+        <item>107</item>
+        <item>109</item>
+        <item>111</item>
+        <item>112</item>
+        <item>113</item>
+        <item>114</item>
+        <item>110</item>
+        <item>108</item>
+    </string-array>
+
+    <string-array name="tinge_arr">
+        <item>No Tinge</item>
+        <item>Very Very Light Brown Tinge</item>
+        <item>Very Light Brown Tinge</item>
+        <item>Light Brown Tinge</item>
+        <item>Medium Brown Tinge</item>
+        <item>Dark Brown Tinge</item>
+        <item>Light Yellowish Brown Tinge</item>
+        <item>Medium Yellowish Brown Tinge</item>
+        <item>Dark Yellowish Brown Tinge</item>
+        <item>Light Brownish Yellow Tinge</item>
+        <item>Medium Brownish Yellow Tinge</item>
+        <item>Dark Brownish Yellow Tinge</item>
+        <item>Light Green Tinge</item>
+        <item>Medium Green Tinge</item>
+        <item>Dark Green Tinge</item>
+        <item>Blue Tinge</item>
+        <item>Pink Tinge, PN</item>
+        <item>Gray Tinge</item>
+        <item>Grayish Tinge</item>
+        <item>MIX, Mix Tinge</item>
+    </string-array>
+    <string-array name="tinge_arr_val">
+        <item>308</item>
+        <item>369</item>
+        <item>370</item>
+        <item>371</item>
+        <item>336</item>
+        <item>330</item>
+        <item>314</item>
+        <item>331</item>
+        <item>332</item>
+        <item>318</item>
+        <item>333</item>
+        <item>334</item>
+        <item>323</item>
+        <item>335</item>
+        <item>337</item>
+        <item>325</item>
+        <item>326</item>
+        <item>328</item>
+        <item>353</item>
+        <item>329</item>
+    </string-array>
+    <string-array name="diamond_cut_polish_sym_names">
+        <item>ID</item>
+        <item>EX</item>
+        <item>VG</item>
+        <item>GD</item>
+        <item>FR</item>
+        <item>PR</item>
+    </string-array>
+    <string-array name="diamond_f_c_names">
+        <item>BLU</item>
+        <item>YLW</item>
+        <item>GRN</item>
+        <item>WHT</item>
+    </string-array>
+    <string-array name="diamond_f_i_names">
+        <item>NON</item>
+        <item>VSL</item>
+        <item>FNT</item>
+        <item>MED</item>
+        <item>STG</item>
+        <item>VST</item>
+    </string-array>
+    <string-array name="diamond_clarity_names">
+        <item>FL</item>
+        <item>IF</item>
+        <item>VVS1</item>
+        <item>VVS2</item>
+        <item>VS1</item>
+        <item>VS2</item>
+        <item>SI1</item>
+        <item>SI2</item>
+        <item>SI3</item>
+        <item>I1</item>
+        <item>I2</item>
+        <item>I3</item>
+    </string-array>
+    <string-array name="diamond_lab_names">
+        <item>GIA</item>
+        <item>IGI</item>
+        <item>HRD</item>
+        <item>EGL</item>
+    </string-array>
+    <string-array name="diamond_names">
+        <item>ROUND</item>
+        <item>CUSHION</item>
+        <item>PRINCESS</item>
+        <item>MARQUISE</item>
+        <item>PEAR</item>
+        <item>HEART</item>
+        <item>OVAL</item>
+        <item>EMERALD</item>
+        <item>RADIANT</item>
+        <item>OTHER</item>
+    </string-array>
+    <string-array name="table_inclusion_array">
+        <item>No Table Inclusion</item>
+        <item>Minor Table Black Inclusion</item>
+        <item>Medium Table Black Inclusion</item>
+        <item>Heavy Table Black Inclusion</item>
+    </string-array>
+    <string-array name="table_inclusion_val">
+        <item>299</item>
+        <item>287</item>
+        <item>288</item>
+        <item>289</item>
+    </string-array>
+    <string-array name="side_inclusion_array">
+        <item>No Side Inclusion</item>
+        <item>Minor Side Black Inclusion</item>
+        <item>Medium Side Black Inclusion</item>
+        <item>Heavy Side Black Inclusion</item>
+    </string-array>
+    <string-array name="side_inclusion_val">
+        <item>265</item>
+        <item>253</item>
+        <item>254</item>
+        <item>255</item>
+    </string-array>
+    <string-array name="open_inclusion_array">
+        <item>No Open Inclusion</item>
+        <item>Minor Pavilion Open Inclusion</item>
+        <item>Medium Pavilion Open Inclusion</item>
+        <item>Heavy Pavilion Open Inclusion</item>
+        <item>Minor Crown Open Inclusion</item>
+        <item>Medium Crown Open Inclusion</item>
+        <item>Heavy Crown Open Inclusion</item>
+        <item>Minor Table Open Inclusion</item>
+        <item>Medium Table Open inclusion</item>
+        <item>Heavy Table Open Inclusion</item>
+    </string-array>
+    <string-array name="open_inclusion_val">
+        <item>188</item>
+        <item>190</item>
+        <item>191</item>
+        <item>192</item>
+        <item>185</item>
+        <item>186</item>
+        <item>187</item>
+        <item>194</item>
+        <item>195</item>
+        <item>196</item>
+    </string-array>
+    <string-array name="Cravity_array">
+        <item>No Cavity</item>
+        <item>Minor Pavilion Cavity</item>
+        <item>Medium Pavilion Cavity</item>
+        <item>Heavy Pavilion Cavity</item>
+        <item>Minor Crown Cavity</item>
+        <item>Medium Crown Cavity</item>
+        <item>Heavy Crown Cavity</item>
+        <item>Minor Table Cavity</item>
+        <item>Medium Table Cavity</item>
+        <item>Heavy Table Cavity</item>
+    </string-array>
+    <string-array name="cavity_val">
+        <item>433</item>
+        <item>434</item>
+        <item>435</item>
+        <item>436</item>
+        <item>437</item>
+        <item>438</item>
+        <item>439</item>
+        <item>440</item>
+        <item>441</item>
+        <item>442</item>
+    </string-array>
+    <string-array name="natural_array">
+        <item>No Natural</item>
+        <item>Minor Pavilion Natural</item>
+        <item>Medium Pavilion Natural</item>
+        <item>Heavy Pavilion Natural</item>
+        <item>Minor Crown Natural</item>
+        <item>Medium Crown Natural</item>
+        <item>Heavy Crown Natural</item>
+        <item>Minor Table Natural</item>
+        <item>Medium Table Natural</item>
+        <item>Heavy Table Natural</item>
+    </string-array>
+    <string-array name="natural_val">
+        <item>58</item>
+        <item>204</item>
+        <item>205</item>
+        <item>206</item>
+        <item>59</item>
+        <item>60</item>
+        <item>61</item>
+        <item>303</item>
+        <item>304</item>
+        <item>305</item>
+    </string-array>
+    <string-array name="Intended_natural_array">
+        <item>No Indented Natural</item>
+        <item>Minor Pavilion Indented Natural</item>
+        <item>Major Pavilion Indented Natural</item>
+        <item>Heavy Pavilion Indented Natural</item>
+        <item>Minor Crown Indented Natural</item>
+        <item>Medium Crown Indented Natural</item>
+        <item>Heavy Crown Indented Natural</item>
+        <item>Minor Table Indented Natural</item>
+        <item>Major Table Indented Natural</item>
+        <item>Heavy Table Indented Natural</item>
+    </string-array>
+    <string-array name="Intended_natural_val">
+        <item>420</item>
+        <item>421</item>
+        <item>422</item>
+        <item>423</item>
+        <item>424</item>
+        <item>425</item>
+        <item>426</item>
+        <item>427</item>
+        <item>428</item>
+        <item>429</item>
+    </string-array>
+    <string-array name="milky_array">
+        <item>No Milky</item>
+        <item>Slight Milky</item>
+        <item>Medium Milky</item>
+        <item>Heavy Milky</item>
+    </string-array>
+    <string-array name="milky_val">
+        <item>177</item>
+        <item>178</item>
+        <item>179</item>
+        <item>180</item>
+    </string-array>
+    <string-array name="luster_array">
+        <item>Excellent</item>
+        <item>Very Good</item>
+        <item>Good</item>
+    </string-array>
+    <string-array name="luster_val">
+        <item>174</item>
+        <item>175</item>
+        <item>176</item>
+    </string-array>
+    <string-array name="extra_facet_array">
+        <item>No Extra Facet</item>
+        <item>Minor Pavilion Extra Facet</item>
+        <item>Medium Pavilion Extra Facet</item>
+        <item>Large Pavilion Extra Facet</item>
+        <item>Minor Crown Extra Facet</item>
+        <item>Medium Crown Extra Facet</item>
+        <item>Large Crown Extra Facet</item>
+        <item>Minor Table Extra Facet</item>
+        <item>Medium Table Extra Facet</item>
+        <item>Large Table Extra Facet</item>
+    </string-array>
+    <string-array name="extra_facet_val">
+        <item>86</item>
+        <item>80</item>
+        <item>81</item>
+        <item>82</item>
+        <item>77</item>
+        <item>78</item>
+        <item>79</item>
+        <item>83</item>
+        <item>84</item>
+        <item>85</item>
+    </string-array>
+    <string-array name="gridle_array">
+        <item>Extremely Thick</item>
+        <item>Very Thick</item>
+        <item>Slightly Thick</item>
+        <item>Slightly Thin</item>
+        <item>Very Thin</item>
+        <item>Extremely Thin</item>
+        <item>Thick</item>
+        <item>Thin</item>
+        <item>Medium</item>
+    </string-array>
+    <string-array name="gridle_val">
+        <item>153</item>
+        <item>152</item>
+        <item>150</item>
+        <item>148</item>
+        <item>146</item>
+        <item>145</item>
+        <item>151</item>
+        <item>147</item>
+        <item>149</item>
+    </string-array>
+    <string-array name="heart_arrow_array">
+        <item>Above 95% H&amp;A</item>
+        <item>Above 75% H&amp;A</item>
+        <item>No H&amp;A</item>
+    </string-array>
+    <string-array name="heart_arrow_val">
+        <item>157</item>
+        <item>158</item>
+        <item>159</item>
+    </string-array>
+    <string-array name="eye_clean_array">
+        <item>No Eye Clean</item>
+        <item>100% Eye Clean</item>
+        <item>Above 85% Eye Clean</item>
+        <item>Above 70% Eye Clean</item>
+    </string-array>
+    <string-array name="eye_clean_val">
+        <item>87</item>
+        <item>88</item>
+        <item>89</item>
+        <item>90</item>
+    </string-array>
+    <string-array name="culet_array">
+        <item>None</item>
+        <item>Very Small</item>
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+        <item>Very Large</item>
+    </string-array>
+    <string-array name="culet_val">
+        <item>65</item>
+        <item>66</item>
+        <item>67</item>
+        <item>68</item>
+        <item>69</item>
+        <item>70</item>
+    </string-array>
+    <string-array name="graining_array">
+        <item>Light Internal Graining</item>
+        <item>Medium Internal Graining</item>
+        <item>Heavy Internal Graining</item>
+        <item>Light Surface Graining</item>
+        <item>Medium Surface Graining</item>
+        <item>Heavy Surface Graining</item>
+    </string-array>
+    <string-array name="graining_val">
+        <item>355</item>
+        <item>356</item>
+        <item>357</item>
+        <item>430</item>
+        <item>431</item>
+        <item>432</item>
+    </string-array>
+    <string-array name="size_list">
+        <item>0.18-0.22</item>
+        <item>0.23-0.29</item>
+        <item>0.30-0.39</item>
+        <item>0.40-0.49</item>
+        <item>0.50-0.69</item>
+        <item>0.70-0.89</item>
+        <item>0.90-0.99</item>
+        <item>1.00-1.49</item>
+        <item>1.50-1.99</item>
+        <item>2.00-2.99</item>
+        <item>3.00-3.99</item>
+        <item>4.00-4.99</item>
+        <item>5.00-5.99</item>
+        <item>6.00-6.99</item>
+        <item>7.00-7.99</item>
+        <item>8.00-8.99</item>
+        <item>9.00-9.99</item>
+        <item>10.00-20.99</item>
+    </string-array>
+
+</resources>

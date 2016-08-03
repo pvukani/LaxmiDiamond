@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/lout_country_raw"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Custom.Custom_Font_TextView
+        android:id="@+id/txt_row_countryList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+</LinearLayout>
