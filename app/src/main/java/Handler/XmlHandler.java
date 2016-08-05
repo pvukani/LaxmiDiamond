@@ -65,8 +65,28 @@ public class XmlHandler extends DefaultHandler {
             item.setState_id(currentValue);
         } else if (localName.equalsIgnoreCase("statename")) {
             item.setStatename(currentValue);
+        }else if (localName.equalsIgnoreCase("shade")) {
+            item.setShade(currentValue);
+        }else if (localName.equalsIgnoreCase("tableinclusion")) {
+            item.setTableinclusion(currentValue);
+        }else if (localName.equalsIgnoreCase("sideinclusion")) {
+            item.setSideinclusion(currentValue);
         } else if (localName.equalsIgnoreCase("username")) {
             item.setUsername(currentValue);
+        }else if (localName.equalsIgnoreCase("graining")) {
+            item.setGraining(currentValue);
+        }else if (localName.equalsIgnoreCase("availibility")) {
+            item.setAvailibility(currentValue);
+        }else if (localName.equalsIgnoreCase("starlength")) {
+            item.setStarlength(currentValue);
+        }else if (localName.equalsIgnoreCase("lowerhalve")) {
+            item.setLowerhalve(currentValue);
+        }else if (localName.equalsIgnoreCase("openinclusion")) {
+            item.setOpeninclusion(currentValue);
+        }else if (localName.equalsIgnoreCase("extrafacet")) {
+            item.setExtrafacet(currentValue);
+        }else if (localName.equalsIgnoreCase("natural")) {
+            item.setNatural(currentValue);
         } else if (localName.equalsIgnoreCase("title")) {
             item.setTitle(currentValue);
         } else if (localName.equalsIgnoreCase("webstatus")) {
@@ -113,13 +133,11 @@ public class XmlHandler extends DefaultHandler {
             item.setMeasurement(currentValue);
         } else if (localName.equalsIgnoreCase("totaldepthper")) {
             item.setTotaldepthper(currentValue);
-        } else if (localName.equalsIgnoreCase("tablediameterper")) {
-            item.setTablediameterper(currentValue);
-        } else if (localName.equalsIgnoreCase("locationname")) {
+        }  else if (localName.equalsIgnoreCase("locationname")) {
             item.setLocationname(currentValue);
         }else if (localName.equalsIgnoreCase("handa")) {
             item.setHanda(currentValue);
-        }else if (localName.equalsIgnoreCase("blackinclusion")) {
+        } else if (localName.equalsIgnoreCase("blackinclusion")) {
             item.setBlackinclusion(currentValue);
         } else if (localName.equalsIgnoreCase("tinge")) {
             item.setTinge(currentValue);
@@ -141,15 +159,15 @@ public class XmlHandler extends DefaultHandler {
             item.setKeytosymbols(currentValue);
         }else if (localName.equalsIgnoreCase("imageexist")) {
             item.setImageexist(currentValue);
-        }else if (localName.equalsIgnoreCase("certificateexist")) {
+        } else if (localName.equalsIgnoreCase("certificateexist")) {
             item.setCertificateexist(currentValue);
         }else if (localName.equalsIgnoreCase("videoexist")) {
             item.setVideoexist(currentValue);
         }else if (localName.equalsIgnoreCase("imageurl")) {
             item.setImageurl(currentValue);
-        }else if (localName.equalsIgnoreCase("certificateurl")) {
+        } else if (localName.equalsIgnoreCase("certificateurl")) {
             item.setCertificateurl(currentValue);
-        }else if (localName.equalsIgnoreCase("verifycertificate")) {
+        } else if (localName.equalsIgnoreCase("verifycertificate")) {
             item.setVerifycertificate(currentValue);
         } else if (localName.equalsIgnoreCase("user_id")) {
             item.setUser_id(currentValue);
@@ -159,17 +177,17 @@ public class XmlHandler extends DefaultHandler {
             item.setPagesize(currentValue);
         } else if (localName.equalsIgnoreCase("totalpages")) {
             item.setTotalpages(currentValue);
-        }  else if (localName.equalsIgnoreCase("laserinscription")) {
+        } else if (localName.equalsIgnoreCase("laserinscription")) {
             item.setLaserinscription(currentValue);
         } else if (localName.equalsIgnoreCase("luster")) {
             item.setLuster(currentValue);
         } else if (localName.equalsIgnoreCase("eyeclean")) {
             item.setEyeclean(currentValue);
-        }else if (localName.equalsIgnoreCase("crownheight")) {
+        } else if (localName.equalsIgnoreCase("crownheight")) {
             item.setCrownheight(currentValue);
-        }else if (localName.equalsIgnoreCase("pavillionangle")) {
+        } else if (localName.equalsIgnoreCase("pavillionangle")) {
             item.setPavillionangle(currentValue);
-        }else if (localName.equalsIgnoreCase("pavillionheight")) {
+        } else if (localName.equalsIgnoreCase("pavillionheight")) {
             item.setPavillionheight(currentValue);
         } else if (localName.equalsIgnoreCase("tablediameterper")) {
             item.setTablediameterper(currentValue);
@@ -227,6 +245,16 @@ public class XmlHandler extends DefaultHandler {
             item.setSTEP12(currentValue);
         }else if (localName.equalsIgnoreCase("STEP13")) {
             item.setSTEP13(currentValue);
+        }else if (localName.equalsIgnoreCase("girdle")) {
+            item.setGirdle(currentValue);
+        }else if (localName.equalsIgnoreCase("culetsize")) {
+            item.setCuletsize(currentValue);
+        }else if (localName.equalsIgnoreCase("cavity")) {
+            item.setCavity(currentValue);
+        }else if (localName.equalsIgnoreCase("comment")) {
+            item.setComment(currentValue);
+        }else if (localName.equalsIgnoreCase("laxmicomment")) {
+            item.setLaxmicomment(currentValue);
         } else if (localName.equalsIgnoreCase("record")) {
             itemsList.add(item);
         }

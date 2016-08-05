@@ -28,12 +28,17 @@
             android:textColor="@color/Blue"
             android:textSize="30sp" />
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/Blue"></View>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <LinearLayout
+            android:background="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -41,7 +46,7 @@
             <LinearLayout
                 android:layout_margin="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="520dp"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -49,7 +54,16 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:orientation="vertical"></LinearLayout>
+                    android:orientation="vertical">
+                    <Custom.Custom_Font_TextView
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:text="Diamond Detail"
+                        android:textSize="25sp"
+                        android:textColor="@color/Blue"
+                        />
+                </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/lout_qc_detail"
@@ -57,7 +71,16 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:orientation="vertical"></LinearLayout>
+                    android:orientation="vertical">
+                    <Custom.Custom_Font_TextView
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:text="QC Detail"
+                        android:textSize="25sp"
+                        android:textColor="@color/Blue"
+                        />
+                </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/lout_param_detail"
@@ -65,12 +88,22 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:orientation="vertical"></LinearLayout>
+                    android:orientation="vertical">
+                    <Custom.Custom_Font_TextView
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:text="Parameter Detail"
+                        android:textSize="25sp"
+                        android:textColor="@color/Blue"
+                        />
+                </LinearLayout>
             </LinearLayout>
             <LinearLayout
                 android:layout_margin="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="50dp">
+                android:layout_height="50dp"
+                android:orientation="vertical">
                 <Custom.Custom_Font_TextView
                     android:gravity="center"
                     android:textColor="@color/white"
@@ -80,6 +113,13 @@
                     android:background="@drawable/detail_page_bg"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
+                <LinearLayout
+                    android:background="@color/white"
+                    android:id="@+id/lout_comment_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>

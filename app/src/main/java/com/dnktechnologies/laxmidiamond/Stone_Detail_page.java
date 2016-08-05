@@ -18,6 +18,7 @@ import org.xml.sax.XMLReader;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -32,10 +33,11 @@ import Handler.XmlHandler;
  * Created by parth on 8/4/2016.
  */
 public class Stone_Detail_page extends Activity {
-    LinearLayout lout_stone_detail, lout_qc_detail, lout_param_detail;
+    LinearLayout lout_stone_detail, lout_qc_detail, lout_param_detail, lout_comment_detail;
     String[] stone_detail_Key, QC_detail, Parameter_detail, Comment;
-    int width,height;
+    int width, height;
     String link;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,24 +46,26 @@ public class Stone_Detail_page extends Activity {
         lout_stone_detail = (LinearLayout) findViewById(R.id.lout_stone_detail);
         lout_qc_detail = (LinearLayout) findViewById(R.id.lout_qc_detail);
         lout_param_detail = (LinearLayout) findViewById(R.id.lout_param_detail);
+        lout_comment_detail = (LinearLayout) findViewById(R.id.lout_comment_detail);
 
         stone_detail_Key = getResources().getStringArray(R.array.d_detail_Key);
         QC_detail = getResources().getStringArray(R.array.QC_detail);
         Parameter_detail = getResources().getStringArray(R.array.Parameter_detail);
         Comment = getResources().getStringArray(R.array.Comment);
 
-        link=GlobalApp.url+"GetSingleStoneDetail?StoneNo="+GlobalApp.stone_id+"&UserID="+GlobalApp.User_Id;
+        link = GlobalApp.url + "GetSingleStoneDetail?StoneNo=" + GlobalApp.stone_id + "&UserID=" + GlobalApp.User_Id;
 //        Log.i("link", "" + link);
         new GetStoneDetail().execute(link);
 
 //
 
     }
-    public void MakeView(int i,LinearLayout linearLayout,String[] stone_detail_Key) {
+
+    public void MakeView(int i, LinearLayout linearLayout, String[] stone_detail_Key, ArrayList<String> My_List) {
 
 
         LinearLayout child = new LinearLayout(Stone_Detail_page.this);
-        LinearLayout.LayoutParams Params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,30);
+        LinearLayout.LayoutParams Params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 30);
         Params.setMargins(5, 5, 5, 5);
         child.setLayoutParams(Params);
         child.setBackgroundColor(Color.parseColor("#c8e6ff"));
@@ -69,7 +73,7 @@ public class Stone_Detail_page extends Activity {
         LinearLayout.LayoutParams param_txt = new TableRow.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f);
         TextView text1 = new TextView(Stone_Detail_page.this);
         text1.setLayoutParams(param_txt);
-        text1.setText(GlobalApp.List_stone_detail_val.get(i));
+        text1.setText(My_List.get(i));
         text1.setTextColor(Color.BLACK);
 
         TextView text2 = new TextView(Stone_Detail_page.this);
@@ -84,8 +88,8 @@ public class Stone_Detail_page extends Activity {
 
         linearLayout.addView(child);
     }
-    public class GetStoneDetail extends AsyncTask<String,Void,String>
-    {
+
+    public class GetStoneDetail extends AsyncTask<String, Void, String> {
         String url;
         XmlHandler myXMLHandler;
         Progress_Dialog progress_dialog = new Progress_Dialog(Stone_Detail_page.this);
@@ -126,17 +130,71 @@ public class Stone_Detail_page extends Activity {
             ArrayList<Model> itemsList = myXMLHandler.getItemsList();
 
             GlobalApp.List_stone_detail_val.clear();
-            prepare_detail_val(itemsList);
-            Log.i("my size", "" + GlobalApp.List_stone_detail_val.size());
-            Log.i("16", "" + GlobalApp.List_stone_detail_val.get(15));
+            GlobalApp.List_QC_detail_val.clear();
+            GlobalApp.List_param_detail_val.clear();
+            GlobalApp.List_comment_detail_val.clear();
 
-          progress_dialog.dismiss();
+            prepare_detail_val(itemsList);
+            prepare_Qc_detail(itemsList);
+            prepare_param_detail(itemsList);
+            prepare_comment_detail(itemsList);
+            progress_dialog.dismiss();
 
         }
+
+        private void prepare_comment_detail(ArrayList<Model> itemsList) {
+            GlobalApp.List_comment_detail_val.add(itemsList.get(0).getComment());
+            GlobalApp.List_comment_detail_val.add(itemsList.get(0).getKeytosymbols());
+            GlobalApp.List_comment_detail_val.add(itemsList.get(0).getLaxmicomment());
+
+            for (int i = 0; i < Comment.length; i++) {
+                MakeView(i, lout_comment_detail,Comment , GlobalApp.List_comment_detail_val);
+            }
+        }
+
+        private void prepare_param_detail(ArrayList<Model> itemsList) {
+            GlobalApp.List_param_detail_val.add(itemsList.get(0).getMeasurement());
+            GlobalApp.List_param_detail_val.add(itemsList.get(0).getTotaldepthper());
+            GlobalApp.List_param_detail_val.add(itemsList.get(0).getTableinclusion());
+            GlobalApp.List_param_detail_val.add(itemsList.get(0).getCrownangle());
+            GlobalApp.List_param_detail_val.add(itemsList.get(0).getCrownheight());
+            GlobalApp.List_param_detail_val.add(itemsList.get(0).getPavillionangle());
+            GlobalApp.List_param_detail_val.add(itemsList.get(0).getPavillionheight());
+            GlobalApp.List_param_detail_val.add(itemsList.get(0).getStarlength());
+            GlobalApp.List_param_detail_val.add(itemsList.get(0).getLowerhalve());
+            GlobalApp.List_param_detail_val.add(itemsList.get(0).getGirdle());
+            GlobalApp.List_param_detail_val.add(itemsList.get(0).getCuletsize());
+            GlobalApp.List_param_detail_val.add(itemsList.get(0).getCavity());
+            for (int i = 0; i < Parameter_detail.length; i++) {
+                MakeView(i, lout_param_detail, Parameter_detail, GlobalApp.List_param_detail_val);
+            }
+        }
+
+        private void prepare_Qc_detail(ArrayList<Model> itemsList) {
+            GlobalApp.List_QC_detail_val.add(itemsList.get(0).getShade());
+            GlobalApp.List_QC_detail_val.add(itemsList.get(0).getTinge());
+            GlobalApp.List_QC_detail_val.add(itemsList.get(0).getLuster());
+            GlobalApp.List_QC_detail_val.add(itemsList.get(0).getEyeclean());
+            GlobalApp.List_QC_detail_val.add(itemsList.get(0).getMilky());
+            GlobalApp.List_QC_detail_val.add(itemsList.get(0).getTableinclusion());
+            GlobalApp.List_QC_detail_val.add(itemsList.get(0).getSideinclusion());
+            GlobalApp.List_QC_detail_val.add(itemsList.get(0).getOpeninclusion());
+            GlobalApp.List_QC_detail_val.add(itemsList.get(0).getExtrafacet());
+            GlobalApp.List_QC_detail_val.add(itemsList.get(0).getNatural());
+            GlobalApp.List_QC_detail_val.add(itemsList.get(0).getGraining());
+            GlobalApp.List_QC_detail_val.add(itemsList.get(0).getHanda());
+            GlobalApp.List_QC_detail_val.add(itemsList.get(0).getAvailibility());
+            GlobalApp.List_QC_detail_val.add(itemsList.get(0).getLocationname());
+
+            for (int i = 0; i < QC_detail.length; i++) {
+                MakeView(i, lout_qc_detail, QC_detail, GlobalApp.List_QC_detail_val);
+            }
+        }
+
         private void prepare_detail_val(ArrayList<Model> itemList) {
             GlobalApp.List_stone_detail_val.add(itemList.get(0).getStone_no());
             GlobalApp.List_stone_detail_val.add(itemList.get(0).getLaboratory());
-            GlobalApp.List_stone_detail_val.add(itemList.get(0).getLabreportno() );
+            GlobalApp.List_stone_detail_val.add(itemList.get(0).getLabreportno());
             GlobalApp.List_stone_detail_val.add(itemList.get(0).getLaserinscription());
             GlobalApp.List_stone_detail_val.add(itemList.get(0).getShape());
             GlobalApp.List_stone_detail_val.add(itemList.get(0).getWeightincarats());
@@ -154,18 +212,12 @@ public class Stone_Detail_page extends Activity {
 
             for (int i = 0; i < stone_detail_Key.length; i++) {
 
-                MakeView(i,lout_stone_detail,stone_detail_Key);
+                MakeView(i, lout_stone_detail, stone_detail_Key, GlobalApp.List_stone_detail_val);
             }
-            for (int i = 0; i < QC_detail.length; i++) {
-              MakeView(i,lout_qc_detail,QC_detail);
-        }
-             for (int i = 0; i < Parameter_detail.length; i++) {
-            MakeView(i, lout_param_detail, Parameter_detail);
-          }
+
 
         }
     }
-
 
 
 }
