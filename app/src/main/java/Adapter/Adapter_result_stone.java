@@ -1,15 +1,21 @@
 package Adapter;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
 import android.support.v7.widget.RecyclerView;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.dnktechnologies.laxmidiamond.GlobalApp;
 import com.dnktechnologies.laxmidiamond.R;
+import com.dnktechnologies.laxmidiamond.Stone_Detail_page;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,9 +27,11 @@ import Bean.Model;
  */
 public class Adapter_result_stone extends RecyclerView.Adapter<Adapter_result_stone.ViewAdapter> {
     List<Model> result_list;
+    Activity activity;
 
-    public Adapter_result_stone(List<Model> result_list)
+    public Adapter_result_stone(Activity activity,List<Model> result_list)
     {
+        this.activity=activity;
         this.result_list=result_list;
     }
 
@@ -47,7 +55,7 @@ public class Adapter_result_stone extends RecyclerView.Adapter<Adapter_result_st
         }
         holder.txt_srno.setText(String.valueOf(pos+1));
         holder.txt_status.setText("AVAILABLE");
-        holder.txt_stoneid.setText(result_list.get(pos).getStone_id());
+        holder.txt_stoneid.setText(result_list.get(pos).getStone_no());
         holder.txt_shape.setText(result_list.get(pos).getShape());
         holder.txt_color.setText(result_list.get(pos).getColor());
         holder.txt_clarity.setText(result_list.get(pos).getClarity());
@@ -78,6 +86,14 @@ public class Adapter_result_stone extends RecyclerView.Adapter<Adapter_result_st
         holder.txt_pv_hgt.setText(result_list.get(pos).getPavillionheight());
         holder.txt_key2syml.setText(result_list.get(pos).getKeytosymbols());
 
+        holder.img_detail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GlobalApp.stone_id=result_list.get(pos).getStone_no().toString();
+                Log.i("Value",""+GlobalApp.stone_id);
+                activity.startActivity(new Intent(activity,Stone_Detail_page.class));
+            }
+        });
     }
 
     public class ViewAdapter extends RecyclerView.ViewHolder {
@@ -86,10 +102,10 @@ public class Adapter_result_stone extends RecyclerView.Adapter<Adapter_result_st
                 txt_lab,txt_rap_price,txt_Disc,txt_pricects,txt_totAmount,txt_measurement,txt_table,txt_depth,txt_location,
                 txt_HandA,txt_blck_incl,txt_colorshade,txt_milky,txt_luster,txt_eyec,txt_ratio,txt_cr_ang,txt_cr_hgt,txt_pv_ang,
                 txt_pv_hgt,txt_key2syml;
-
+        ImageView img_detail;
         public ViewAdapter(View itemView) {
             super(itemView);
-
+            this.img_detail=(ImageView)itemView.findViewById(R.id.img_detail);
             this.txt_srno= (TextView) itemView.findViewById(R.id.txt_srno);
             this.txt_status= (TextView) itemView.findViewById(R.id.txt_status);
             this.txt_stoneid= (TextView) itemView.findViewById(R.id.txt_stoneid);

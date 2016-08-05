@@ -195,7 +195,7 @@
 
         <LinearLayout
             android:id="@+id/lout_stoneid"
-            android:layout_width="@dimen/item"
+            android:layout_width="@dimen/item_120"
             android:layout_height="match_parent"
             android:orientation="vertical">
 

@@ -112,7 +112,7 @@ public class New_Arrival extends AppCompatActivity implements View.OnClickListen
             ArrayList<Model> itemsList = myXMLHandler.getItemsList();
             GlobalApp.Arr_newArr_stone.clear();
             GlobalApp.Arr_newArr_stone.addAll(itemsList);
-            ad_new_arrival = new Adapter_result_stone(GlobalApp.Arr_newArr_stone);
+            ad_new_arrival = new Adapter_result_stone(New_Arrival.this,GlobalApp.Arr_newArr_stone);
             rv_new_arr.setAdapter(ad_new_arrival);
             progress_dialog.dismiss();
 //            Log.i("Size",""+itemsList.size());

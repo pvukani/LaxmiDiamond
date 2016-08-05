@@ -71,9 +71,7 @@ public class XmlHandler extends DefaultHandler {
             item.setTitle(currentValue);
         } else if (localName.equalsIgnoreCase("webstatus")) {
             item.setWebstatus(currentValue);
-        } else if (localName.equalsIgnoreCase("stone_id")) {
-            item.setStone_id(currentValue);
-        } else if (localName.equalsIgnoreCase("stone_no")) {
+        }  else if (localName.equalsIgnoreCase("stone_no")) {
             item.setStone_no(currentValue);
         } else if (localName.equalsIgnoreCase("laboratory")) {
             item.setLaboratory(currentValue);
@@ -161,6 +159,22 @@ public class XmlHandler extends DefaultHandler {
             item.setPagesize(currentValue);
         } else if (localName.equalsIgnoreCase("totalpages")) {
             item.setTotalpages(currentValue);
+        }  else if (localName.equalsIgnoreCase("laserinscription")) {
+            item.setLaserinscription(currentValue);
+        } else if (localName.equalsIgnoreCase("luster")) {
+            item.setLuster(currentValue);
+        } else if (localName.equalsIgnoreCase("eyeclean")) {
+            item.setEyeclean(currentValue);
+        }else if (localName.equalsIgnoreCase("crownheight")) {
+            item.setCrownheight(currentValue);
+        }else if (localName.equalsIgnoreCase("pavillionangle")) {
+            item.setPavillionangle(currentValue);
+        }else if (localName.equalsIgnoreCase("pavillionheight")) {
+            item.setPavillionheight(currentValue);
+        } else if (localName.equalsIgnoreCase("tablediameterper")) {
+            item.setTablediameterper(currentValue);
+        } else if (localName.equalsIgnoreCase("crownheight")) {
+            item.setCrownheight(currentValue);
         } else if (localName.equalsIgnoreCase("totalrecord")) {
             item.setTotalrecord(currentValue);
         } else if (localName.equalsIgnoreCase("offer_id")) {

@@ -26,6 +26,135 @@ public class Model {
     String fluorescencecolor;
     String liveraparate;
     String websitediscount;
+
+    public String getLaserinscription() {
+        return laserinscription;
+    }
+
+    public void setLaserinscription(String laserinscription) {
+        this.laserinscription = laserinscription;
+    }
+
+    public String getShade() {
+        return shade;
+    }
+
+    public void setShade(String shade) {
+        this.shade = shade;
+    }
+
+    public String getTableinclusion() {
+        return tableinclusion;
+    }
+
+    public void setTableinclusion(String tableinclusion) {
+        this.tableinclusion = tableinclusion;
+    }
+
+    public String getSideinclusion() {
+        return sideinclusion;
+    }
+
+    public void setSideinclusion(String sideinclusion) {
+        this.sideinclusion = sideinclusion;
+    }
+
+    public String getOpeninclusion() {
+        return openinclusion;
+    }
+
+    public void setOpeninclusion(String openinclusion) {
+        this.openinclusion = openinclusion;
+    }
+
+    public String getExtrafacet() {
+        return extrafacet;
+    }
+
+    public void setExtrafacet(String extrafacet) {
+        this.extrafacet = extrafacet;
+    }
+
+    public String getNatural() {
+        return natural;
+    }
+
+    public void setNatural(String natural) {
+        this.natural = natural;
+    }
+
+    public String getGraining() {
+        return graining;
+    }
+
+    public void setGraining(String graining) {
+        this.graining = graining;
+    }
+
+    public String getAvailibility() {
+        return availibility;
+    }
+
+    public void setAvailibility(String availibility) {
+        this.availibility = availibility;
+    }
+
+    public String getStarlength() {
+        return starlength;
+    }
+
+    public void setStarlength(String starlength) {
+        this.starlength = starlength;
+    }
+
+    public String getLowerhalve() {
+        return lowerhalve;
+    }
+
+    public void setLowerhalve(String lowerhalve) {
+        this.lowerhalve = lowerhalve;
+    }
+
+    public String getGirdle() {
+        return girdle;
+    }
+
+    public void setGirdle(String girdle) {
+        this.girdle = girdle;
+    }
+
+    public String getCuletsize() {
+        return culetsize;
+    }
+
+    public void setCuletsize(String culetsize) {
+        this.culetsize = culetsize;
+    }
+
+    public String getCavity() {
+        return cavity;
+    }
+
+    public void setCavity(String cavity) {
+        this.cavity = cavity;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+    public String getLaxmicomment() {
+        return laxmicomment;
+    }
+
+    public void setLaxmicomment(String laxmicomment) {
+        this.laxmicomment = laxmicomment;
+    }
+
     String websiterate;
     String websiteamount;
     String lddiscount;
@@ -34,7 +163,8 @@ public class Model {
     String measurement;
     String totaldepthper;
     String tablediameterper;
-
+    String laserinscription, shade, tableinclusion, sideinclusion, openinclusion, extrafacet, natural, graining, availibility, starlength,
+            lowerhalve,girdle,culetsize,cavity,comment,laxmicomment;
     public String getErrormessage() {
         return errormessage;
     }

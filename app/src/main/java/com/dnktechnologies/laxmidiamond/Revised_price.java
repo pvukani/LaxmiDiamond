@@ -113,7 +113,7 @@ public class Revised_price extends AppCompatActivity implements View.OnClickList
 //            Log.i("Size_revisedPr",""+itemsList.size());
             GlobalApp.Arr_revised_stone.clear();
             GlobalApp.Arr_revised_stone.addAll(itemsList);
-            ad_revised_stone=new Adapter_result_stone(GlobalApp.Arr_revised_stone);
+            ad_revised_stone=new Adapter_result_stone(Revised_price.this,GlobalApp.Arr_revised_stone);
             rv_revisedPR.setAdapter(ad_revised_stone);
             progress_dialog.dismiss();
         }

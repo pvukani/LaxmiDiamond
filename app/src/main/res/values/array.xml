@@ -139,6 +139,60 @@
         <item>@drawable/n_hover</item>
         <item>@drawable/o_p_hover</item>
     </array>
+    <string-array name="d_detail_Key">
+        <item>Stone No:</item>
+        <item>Lab:</item>
+        <item>Report No:</item>
+        <item>Inscription:</item>
+        <item>Shape:</item>
+        <item>Carat Weight:</item>
+        <item>Color:</item>
+        <item>Clarity:</item>
+        <item>Cut:</item>
+        <item>Polish:</item>
+        <item>Symmentry:</item>
+        <item>Fluorescence:</item>
+        <item>Rap Rate(USD):</item>
+        <item>Rap Disc(%):</item>
+        <item>Price/Cts:</item>
+        <item>Total Amount(USD):</item>
+    </string-array>
+    <string-array name="QC_detail">
+        <item>Shade:</item>
+        <item>Tinge</item>
+        <item>Luster:</item>
+        <item>Eye Clean:</item>
+        <item>Milky:</item>
+        <item>Table Inclusion:</item>
+        <item>Side Inclusion:</item>
+        <item>Open Inclusion:</item>
+        <item>Extra Facet:</item>
+        <item>Naatural:</item>
+        <item>Graining:</item>
+        <item>Hearts and Arrow:</item>
+        <item>Availablity:</item>
+        <item>Location:</item>
+    </string-array>
+    <string-array name="Parameter_detail">
+        <item>Measurement:</item>
+        <item>Total Depth:</item>
+        <item>Table(%):</item>
+        <item>Crown Angle:</item>
+        <item>Crown Height:</item>
+        <item>Pav Angle:</item>
+        <item>Pav Height:</item>
+        <item>Star Length:</item>
+        <item>Lower Halves:</item>
+        <item>Girdle:</item>
+        <item>Culet:</item>
+        <item>Ratio:</item>
+    </string-array>
+    <string-array name="Comment">
+        <item>Cert.Comment:</item>
+        <item>Keys to Symbols:</item>
+        <item>Laxmi Comment:</item>
+        <item>Brands:</item>
+    </string-array>
     <string-array name="diamond_color_names">
         <item>D</item>
         <item>E</item>

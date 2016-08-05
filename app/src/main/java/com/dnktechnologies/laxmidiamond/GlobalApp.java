@@ -18,6 +18,15 @@ import Dialog.*;
  * Created by parth on 6/21/2016.
  */
 public class GlobalApp {
+    public static String stone_id;
+//    public static String[] stone_detail;
+//    public static String[] Qc_detail;
+//    public static String[] param_detail;
+//    public static String[] comment_detail;
+    public static List<String> List_stone_detail_val=new ArrayList<String>();
+    public static List<String> List_QC_detail_val=new ArrayList<String>();
+    public static List<String> List_param_detail_val=new ArrayList<String>();
+    public static List<String> List_comment_detail_val=new ArrayList<String>();
     public static String link;
     static String url = "http://ws.laxmidiamond.com/lswebservice.asmx/";
     static String msg_connection_Prob = "Connction not Found";

@@ -113,7 +113,7 @@ public class Bgm_stone extends AppCompatActivity implements View.OnClickListener
             Log.i("Size_bgm", "" + itemsList.size());
             GlobalApp.Arr_Bgm_stone.clear();
             GlobalApp.Arr_Bgm_stone.addAll(itemsList);
-            ad_bgm_stone = new Adapter_result_stone(GlobalApp.Arr_Bgm_stone);
+            ad_bgm_stone = new Adapter_result_stone(Bgm_stone.this,GlobalApp.Arr_Bgm_stone);
             rv_bgmStone.setAdapter(ad_bgm_stone);
             progress_dialog.dismiss();
 
