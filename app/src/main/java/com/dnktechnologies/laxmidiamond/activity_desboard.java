@@ -13,6 +13,9 @@ public class activity_desboard extends AppCompatActivity implements View.OnClick
             new_arrival, bgm_stones, revised_price, tracked_stones, my_cart,
             my_offers, my_purchase, lout_logout;
 
+    Bundle bundle;
+    String parent="parent";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +32,8 @@ public class activity_desboard extends AppCompatActivity implements View.OnClick
         my_cart = (LinearLayout) findViewById(R.id.my_cart);
         my_offers = (LinearLayout) findViewById(R.id.my_offers);
         my_purchase = (LinearLayout) findViewById(R.id.my_purchase);
+
+        bundle=new Bundle();
 
         single_stone_search.setOnClickListener(this);
         lout_logout.setOnClickListener(this);
@@ -81,20 +86,28 @@ public class activity_desboard extends AppCompatActivity implements View.OnClick
             }
             case R.id.bgm_stones:
             {
-                Intent in=new Intent(this,Bgm_stone.class);
+                Intent in=new Intent(this,Stone_List.class);
+                bundle.putString(parent,"BGM");
+                in.putExtras(bundle);
+//                Intent in=new Intent(this,Bgm_stone.class);
                 startActivity(in);
                 break;
             }
             case R.id.new_arrival:
             {
-
-                Intent in=new Intent(this,New_Arrival.class);
+                Intent in=new Intent(this,Stone_List.class);
+                bundle.putString(parent,"NARR");
+                in.putExtras(bundle);
+//                Intent in=new Intent(this,New_Arrival.class);
                 startActivity(in);
                 break;
             }
             case R.id.revised_price:
             {
-                Intent in=new Intent(this,Revised_price.class);
+                Intent in=new Intent(this,Stone_List.class);
+                bundle.putString(parent,"RPR");
+                in.putExtras(bundle);
+//                Intent in=new Intent(this,Revised_price.class);
                 startActivity(in);
                 break;
             }

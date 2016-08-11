@@ -25,6 +25,7 @@ import javax.xml.parsers.SAXParserFactory;
 
 import Adapter.Adapter_result_stone;
 import Bean.Model;
+import Custom.ObservableScrollView;
 import Dialog.Logout_Dialog;
 import Dialog.Progress_Dialog;
 import Handler.XmlHandler;
@@ -37,11 +38,12 @@ public class New_Arrival extends AppCompatActivity implements View.OnClickListen
     String link;
     Button btn_home, btn_logout;
     Adapter_result_stone ad_new_arrival;
-
+    ObservableScrollView header_scroll;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.result_stone);
+        header_scroll= (ObservableScrollView) findViewById(R.id.header_scroll);
         rv_new_arr = (RecyclerView) findViewById(R.id.rv_stone);
         btn_home = (Button) findViewById(R.id.btn_home);
         btn_logout = (Button) findViewById(R.id.btn_logout);

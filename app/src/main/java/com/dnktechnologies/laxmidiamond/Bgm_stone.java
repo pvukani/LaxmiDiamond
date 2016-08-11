@@ -24,6 +24,7 @@ import javax.xml.parsers.SAXParserFactory;
 
 import Adapter.Adapter_result_stone;
 import Bean.Model;
+import Custom.ObservableScrollView;
 import Dialog.Logout_Dialog;
 import Dialog.Progress_Dialog;
 import Handler.XmlHandler;
@@ -36,7 +37,7 @@ public class Bgm_stone extends AppCompatActivity implements View.OnClickListener
     String link;
     Button btn_home, btn_logout;
     Adapter_result_stone ad_bgm_stone;
-
+    ObservableScrollView header_scroll;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +48,9 @@ public class Bgm_stone extends AppCompatActivity implements View.OnClickListener
         btn_logout = (Button) findViewById(R.id.btn_logout);
         btn_home.setOnClickListener(this);
         btn_logout.setOnClickListener(this);
+
+        header_scroll= (ObservableScrollView) findViewById(R.id.header_scroll);
+//        row_scroll= (ObservableScrollView) findViewById(R.id.row_scroll);
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);
         rv_bgmStone.setLayoutManager(layoutManager);

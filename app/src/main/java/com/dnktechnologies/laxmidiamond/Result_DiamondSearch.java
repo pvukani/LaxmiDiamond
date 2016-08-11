@@ -201,7 +201,7 @@ public class Result_DiamondSearch extends AppCompatActivity implements View.OnCl
                 new OK_Dialog(Result_DiamondSearch.this, GlobalApp.msg_noResult);
                 progress_dialog.dismiss();
             } else {
-                adapter_result_stone = new Adapter_result_stone(Result_DiamondSearch.this,GlobalApp.Arr_Result_stone);
+//                adapter_result_stone = new Adapter_result_stone(Result_DiamondSearch.this,GlobalApp.Arr_Result_stone);
                 RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);
                 rv_result_stone.setLayoutManager(layoutManager);
 //                LinearLayoutManager linearLayoutManager = new LinearLayoutManager(Result_DiamondSearch.this);

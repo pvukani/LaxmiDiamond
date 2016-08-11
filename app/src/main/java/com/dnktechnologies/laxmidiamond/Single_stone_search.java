@@ -41,6 +41,8 @@ import Handler.XmlHandler;
 
 public class Single_stone_search extends AppCompatActivity implements View.OnClickListener {
 
+    String parent="parent";
+    Bundle bundle;
     String pop_title = "", plus_iv_state = "double";
     HashMap<Integer, Boolean> Map_shape = new HashMap<Integer, Boolean>();
     HashMap<Integer, Boolean> Map_lab = new HashMap<Integer, Boolean>();
@@ -89,7 +91,7 @@ public class Single_stone_search extends AppCompatActivity implements View.OnCli
         setContentView(R.layout.single_stone_search);
 
         FindViewById();
-
+        bundle=new Bundle();
 
         nm_cps = getResources().getStringArray(R.array.diamond_cut_polish_sym_names);
         nm_f_color = getResources().getStringArray(R.array.diamond_f_c_names);
@@ -476,8 +478,12 @@ public class Single_stone_search extends AppCompatActivity implements View.OnCli
             case R.id.btn_search_stone: {
 
 //                new myAsynk().execute();
-                getUrlContent();//acrting to web service
-                Intent in = new Intent(getApplicationContext(), Result_DiamondSearch.class);
+                getUrlContent();//according to web service
+//                Intent in = new Intent(getApplicationContext(), Result_DiamondSearch.class);
+                Intent in=new Intent(this,Stone_List.class);
+                bundle.putString(parent,"STONE");
+                in.putExtras(bundle);
+//                Intent in=new Intent(this,New_Arrival.class);
                 startActivity(in);
                 break;
             }

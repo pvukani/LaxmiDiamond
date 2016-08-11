@@ -155,7 +155,7 @@ public class Stone_Detail_page extends Activity {
         private void prepare_param_detail(ArrayList<Model> itemsList) {
             GlobalApp.List_param_detail_val.add(itemsList.get(0).getMeasurement());
             GlobalApp.List_param_detail_val.add(itemsList.get(0).getTotaldepthper());
-            GlobalApp.List_param_detail_val.add(itemsList.get(0).getTableinclusion());
+            GlobalApp.List_param_detail_val.add(itemsList.get(0).getTablediameterper());
             GlobalApp.List_param_detail_val.add(itemsList.get(0).getCrownangle());
             GlobalApp.List_param_detail_val.add(itemsList.get(0).getCrownheight());
             GlobalApp.List_param_detail_val.add(itemsList.get(0).getPavillionangle());

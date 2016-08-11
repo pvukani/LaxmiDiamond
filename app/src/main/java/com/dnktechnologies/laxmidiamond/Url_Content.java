@@ -5,7 +5,7 @@ package com.dnktechnologies.laxmidiamond;
  */
 public class Url_Content {
 
-    static String shap = "", lap = "", color = "", clarity = "", cut = "",
+    public static String shap = "", lap = "", color = "", clarity = "", cut = "",
             polish = "", sym = "", f_inten = "", f_color = "",
             pricrt_from = "", pricrt_to = "", tootal_amt_f = "",
             total_amt_t = "", discount_f = "", discount_t = "", carat_frm = "",

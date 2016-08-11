@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Bean.Model;
+import Custom.ObservableScrollView;
 
 /**
  * Created by parth on 7/12/2016.
@@ -28,11 +29,12 @@ import Bean.Model;
 public class Adapter_result_stone extends RecyclerView.Adapter<Adapter_result_stone.ViewAdapter> {
     List<Model> result_list;
     Activity activity;
-
+//    ObservableScrollView header_scroll;
     public Adapter_result_stone(Activity activity,List<Model> result_list)
     {
         this.activity=activity;
         this.result_list=result_list;
+//        this.header_scroll=header_scroll;
     }
 
     @Override
@@ -49,9 +51,12 @@ public class Adapter_result_stone extends RecyclerView.Adapter<Adapter_result_st
     @Override
     public void onBindViewHolder(final Adapter_result_stone.ViewAdapter holder,int position) {
         final int pos=position;
-        if((pos+1)%2==0)
+        if((pos%2) == 0)
         {
             holder.itemView.setBackgroundColor(Color.parseColor("#C8E6FF"));
+        }
+        else{
+            holder.itemView.setBackgroundColor(Color.parseColor("#FFFFFF"));
         }
         holder.txt_srno.setText(String.valueOf(pos+1));
         holder.txt_status.setText("AVAILABLE");
@@ -89,11 +94,21 @@ public class Adapter_result_stone extends RecyclerView.Adapter<Adapter_result_st
         holder.img_detail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                GlobalApp.stone_id=result_list.get(pos).getStone_no().toString();
-                Log.i("Value",""+GlobalApp.stone_id);
-                activity.startActivity(new Intent(activity,Stone_Detail_page.class));
+                GlobalApp.stone_id = result_list.get(pos).getStone_no().toString();
+                Log.i("Value", "" + GlobalApp.stone_id);
+                activity.startActivity(new Intent(activity, Stone_Detail_page.class));
             }
         });
+
+        /*holder.row_scroll.setOnScrollChangedListener(new ObservableScrollView.OnScrollChangedListener() {
+            @Override
+            public void onScrollChanged(int deltaX, int deltaY) {
+                int scrollX=holder.row_scroll.getScrollX();
+//                header_scroll.scrollTo(scrollX,0);
+
+
+            }
+        });*/
     }
 
     public class ViewAdapter extends RecyclerView.ViewHolder {
@@ -103,6 +118,7 @@ public class Adapter_result_stone extends RecyclerView.Adapter<Adapter_result_st
                 txt_HandA,txt_blck_incl,txt_colorshade,txt_milky,txt_luster,txt_eyec,txt_ratio,txt_cr_ang,txt_cr_hgt,txt_pv_ang,
                 txt_pv_hgt,txt_key2syml;
         ImageView img_detail;
+//        ObservableScrollView row_scroll;
         public ViewAdapter(View itemView) {
             super(itemView);
             this.img_detail=(ImageView)itemView.findViewById(R.id.img_detail);
@@ -138,6 +154,7 @@ public class Adapter_result_stone extends RecyclerView.Adapter<Adapter_result_st
             this.txt_pv_ang=(TextView) itemView.findViewById(R.id.txt_pv_angl);
             this.txt_pv_hgt=(TextView) itemView.findViewById(R.id.txt_pv_hgt);
             this.txt_key2syml=(TextView) itemView.findViewById(R.id.txt_key2syml);
+//            this.row_scroll=(ObservableScrollView) itemView.findViewById(R.id.row_scroll);
         }
     }
 }
