@@ -2,6 +2,7 @@ package Fragment;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -36,7 +37,7 @@ import Handler.XmlHandler;
 /**
  * Created by parth on 8/10/2016.
  */
-public class Frag_new_Arrival extends android.app.Fragment {
+public class Frag_new_Arrival extends android.app.Fragment{
     RecyclerView rv_new_arr;
     String link;
     Adapter_result_stone ad_new_arrival;
@@ -100,6 +101,8 @@ public class Frag_new_Arrival extends android.app.Fragment {
             ArrayList<Model> itemsList = myXMLHandler.getItemsList();
             GlobalApp.Arr_newArr_stone.clear();
             GlobalApp.Arr_newArr_stone.addAll(itemsList);
+            GlobalApp.Arr_for_grid.clear();
+            GlobalApp.Arr_for_grid.addAll(GlobalApp.Arr_newArr_stone);
             ad_new_arrival = new Adapter_result_stone(getActivity(),GlobalApp.Arr_newArr_stone);
             rv_new_arr.setAdapter(ad_new_arrival);
             progress_dialog.dismiss();

@@ -2,7 +2,9 @@ package Fragment;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -39,8 +41,8 @@ public class Frag_Bgm extends android.app.Fragment {
     RecyclerView rv_bgmStone;
     String link;
     Adapter_result_stone ad_bgm_stone;
-//    ObservableScrollView header_scroll;
     View view;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -53,6 +55,7 @@ public class Frag_Bgm extends android.app.Fragment {
         Url_Content.no_bgm = "2";
         link = GlobalApp.obtainLink();
         Log.i("bgm", "" + link);
+        Log.i("currrnt", "BGM");
         new GetBgmStone().execute(link);
         return view;
     }
@@ -61,6 +64,7 @@ public class Frag_Bgm extends android.app.Fragment {
         rv_bgmStone = (RecyclerView) view.findViewById(R.id.rv_stone);
 //        header_scroll= (ObservableScrollView) view.findViewById(R.id.header_scroll);
     }
+
     public class GetBgmStone extends AsyncTask<String, Void, String> {
         String url;
         XmlHandler myXMLHandler;
@@ -101,7 +105,9 @@ public class Frag_Bgm extends android.app.Fragment {
             Log.i("Size_bgm", "" + itemsList.size());
             GlobalApp.Arr_Bgm_stone.clear();
             GlobalApp.Arr_Bgm_stone.addAll(itemsList);
-            ad_bgm_stone = new Adapter_result_stone(getActivity(),GlobalApp.Arr_Bgm_stone);
+            GlobalApp.Arr_for_grid.clear();
+            GlobalApp.Arr_for_grid.addAll(GlobalApp.Arr_Bgm_stone);
+            ad_bgm_stone = new Adapter_result_stone(getActivity(), GlobalApp.Arr_Bgm_stone);
             rv_bgmStone.setAdapter(ad_bgm_stone);
             progress_dialog.dismiss();
 

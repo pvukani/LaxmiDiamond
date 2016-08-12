@@ -14,7 +14,7 @@ public class activity_desboard extends AppCompatActivity implements View.OnClick
             my_offers, my_purchase, lout_logout;
 
     Bundle bundle;
-    String parent="parent";
+    String parent = "parent";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,7 @@ public class activity_desboard extends AppCompatActivity implements View.OnClick
         my_offers = (LinearLayout) findViewById(R.id.my_offers);
         my_purchase = (LinearLayout) findViewById(R.id.my_purchase);
 
-        bundle=new Bundle();
+        bundle = new Bundle();
 
         single_stone_search.setOnClickListener(this);
         lout_logout.setOnClickListener(this);
@@ -52,62 +52,50 @@ public class activity_desboard extends AppCompatActivity implements View.OnClick
 
     @Override
     public void onClick(View v) {
-    int id=v.getId();
-        switch (id)
-        {
-            case R.id.single_stone_search:
-            {
-                Intent in=new Intent(activity_desboard.this,Single_stone_search.class);
+        int id = v.getId();
+        switch (id) {
+            case R.id.single_stone_search: {
+                Intent in = new Intent(activity_desboard.this, Single_stone_search.class);
                 startActivity(in);
                 break;
             }
-            case R.id.lout_logout:
-            {
+            case R.id.lout_logout: {
                 new Dialog.Logout_Dialog(activity_desboard.this);
                 break;
             }
-            case R.id.quick_search:
-            {
-                Intent in =new Intent(activity_desboard.this,Quick_search.class);
+            case R.id.quick_search: {
+                Intent in = new Intent(activity_desboard.this, Quick_search.class);
                 startActivity(in);
                 break;
             }
-            case R.id.my_cart:
-            {
-                Intent in=new Intent(this,My_cart.class);
+            case R.id.my_cart: {
+                Intent in = new Intent(this, My_cart.class);
                 startActivity(in);
                 break;
             }
-            case R.id.my_offers:
-            {
-                Intent in=new Intent(this,My_offers.class);
+            case R.id.my_offers: {
+                Intent in = new Intent(this, My_offers.class);
                 startActivity(in);
                 break;
             }
-            case R.id.bgm_stones:
-            {
-                Intent in=new Intent(this,Stone_List.class);
-                bundle.putString(parent,"BGM");
+            case R.id.bgm_stones: {
+                Intent in = new Intent(this, Stone_List.class);
+                bundle.putString(parent, "BGM");
                 in.putExtras(bundle);
-//                Intent in=new Intent(this,Bgm_stone.class);
                 startActivity(in);
                 break;
             }
-            case R.id.new_arrival:
-            {
-                Intent in=new Intent(this,Stone_List.class);
-                bundle.putString(parent,"NARR");
+            case R.id.new_arrival: {
+                Intent in = new Intent(this, Stone_List.class);
+                bundle.putString(parent, "NARR");
                 in.putExtras(bundle);
-//                Intent in=new Intent(this,New_Arrival.class);
                 startActivity(in);
                 break;
             }
-            case R.id.revised_price:
-            {
-                Intent in=new Intent(this,Stone_List.class);
-                bundle.putString(parent,"RPR");
+            case R.id.revised_price: {
+                Intent in = new Intent(this, Stone_List.class);
+                bundle.putString(parent, "RPR");
                 in.putExtras(bundle);
-//                Intent in=new Intent(this,Revised_price.class);
                 startActivity(in);
                 break;
             }

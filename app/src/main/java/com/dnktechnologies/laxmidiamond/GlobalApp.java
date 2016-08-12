@@ -19,7 +19,7 @@ import Dialog.*;
  */
 public class GlobalApp {
     public static String stone_id;
-
+    public static List<Model> Arr_for_grid=new ArrayList<Model>();
     public static ArrayList<String> List_stone_detail_val=new ArrayList<String>();
     public static ArrayList<String> List_QC_detail_val=new ArrayList<String>();
     public static ArrayList<String> List_param_detail_val=new ArrayList<String>();
@@ -27,7 +27,7 @@ public class GlobalApp {
     public static String link;
     static String url = "http://ws.laxmidiamond.com/lswebservice.asmx/";
     static String msg_connection_Prob = "Connction not Found";
-    static String msg_noResult = "Your Search Result Has 0\nStone.Please Searh Again\nMore Precisely";
+    public static String msg_noResult = "Your Search Result Has 0\nStone.Please Searh Again\nMore Precisely";
     static String msg_reg_compName = "Company Name not Shound be Empty";
     static String msg_reg_fname = "First Name not Shound be Empty";
     static String msg_reg_lName = "Last Name not Shound be Empty";
@@ -43,6 +43,8 @@ public class GlobalApp {
     static String msg_login_uname = "UserName not Shound be Empty";
     static String msg_login_pass = "Password not Shound be Empty";
     public static String title = "LaxmiDiamond";
+
+
     public  static  String User_Id = "";
     public static List<Model> arr_model_list = new ArrayList<Model>();
 

@@ -2,6 +2,7 @@ package Fragment;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -40,6 +41,7 @@ public class Frag_ReVised_Price extends android.app.Fragment {
     String link;
     Adapter_result_stone ad_revised_stone;
     View view;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -49,7 +51,7 @@ public class Frag_ReVised_Price extends android.app.Fragment {
         rv_revisedPR.setLayoutManager(layoutManager);
         Url_Content.clear_parameter();
         Url_Content.isfancy = "-1";
-        Url_Content.RevisedPrice="1";
+        Url_Content.RevisedPrice = "1";
         link = GlobalApp.obtainLink();
         Log.i("Revised price", "" + link);
         new GetRevisedPr().execute(link);
@@ -60,8 +62,8 @@ public class Frag_ReVised_Price extends android.app.Fragment {
         rv_revisedPR = (RecyclerView) view.findViewById(R.id.rv_stone);
 //        header_scroll= (ObservableScrollView) view.findViewById(R.id.header_scroll);
     }
-    public class GetRevisedPr extends AsyncTask<String,Void,String>
-    {
+
+    public class GetRevisedPr extends AsyncTask<String, Void, String> {
         String url;
         XmlHandler myXMLHandler;
         Progress_Dialog progress_dialog = new Progress_Dialog(getActivity());
@@ -101,7 +103,9 @@ public class Frag_ReVised_Price extends android.app.Fragment {
 //            Log.i("Size_revisedPr",""+itemsList.size());
             GlobalApp.Arr_revised_stone.clear();
             GlobalApp.Arr_revised_stone.addAll(itemsList);
-            ad_revised_stone=new Adapter_result_stone(getActivity(),GlobalApp.Arr_revised_stone);
+            GlobalApp.Arr_for_grid.clear();
+            GlobalApp.Arr_for_grid.addAll(GlobalApp.Arr_revised_stone);
+            ad_revised_stone = new Adapter_result_stone(getActivity(), GlobalApp.Arr_revised_stone);
             rv_revisedPR.setAdapter(ad_revised_stone);
             progress_dialog.dismiss();
         }

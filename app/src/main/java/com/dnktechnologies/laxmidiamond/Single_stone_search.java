@@ -41,7 +41,7 @@ import Handler.XmlHandler;
 
 public class Single_stone_search extends AppCompatActivity implements View.OnClickListener {
 
-    String parent="parent";
+    String parent = "parent";
     Bundle bundle;
     String pop_title = "", plus_iv_state = "double";
     HashMap<Integer, Boolean> Map_shape = new HashMap<Integer, Boolean>();
@@ -91,7 +91,7 @@ public class Single_stone_search extends AppCompatActivity implements View.OnCli
         setContentView(R.layout.single_stone_search);
 
         FindViewById();
-        bundle=new Bundle();
+        bundle = new Bundle();
 
         nm_cps = getResources().getStringArray(R.array.diamond_cut_polish_sym_names);
         nm_f_color = getResources().getStringArray(R.array.diamond_f_c_names);
@@ -476,14 +476,10 @@ public class Single_stone_search extends AppCompatActivity implements View.OnCli
                 break;
             }
             case R.id.btn_search_stone: {
-
-//                new myAsynk().execute();
                 getUrlContent();//according to web service
-//                Intent in = new Intent(getApplicationContext(), Result_DiamondSearch.class);
-                Intent in=new Intent(this,Stone_List.class);
-                bundle.putString(parent,"STONE");
+                Intent in = new Intent(this, Stone_List.class);
+                bundle.putString(parent, "STONE");
                 in.putExtras(bundle);
-//                Intent in=new Intent(this,New_Arrival.class);
                 startActivity(in);
                 break;
             }
@@ -491,7 +487,8 @@ public class Single_stone_search extends AppCompatActivity implements View.OnCli
 
         }
     }
-//get replaced str
+
+    //get replaced str
     public String getReplacedStr(String name[], String value[], String givenstr) {
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i < name.length; i++) {
@@ -501,6 +498,7 @@ public class Single_stone_search extends AppCompatActivity implements View.OnCli
         }
         return RemoveFirstChar(stringBuilder.toString());
     }
+
     //remove First char
     private String RemoveFirstChar(String Value) {
         return Value.substring(1);
@@ -624,199 +622,154 @@ public class Single_stone_search extends AppCompatActivity implements View.OnCli
             Url_Content.fancy_overtone="";
         }*/
         //tinge
-        if(!edit_tinge.getText().toString().trim().equals(""))
-        {
-            String tinge_nm[]=getResources().getStringArray(R.array.tinge_arr);
-            String tinge_val[]=getResources().getStringArray(R.array.tinge_arr_val);
-            String Ans=edit_tinge.getText().toString().trim();
+        if (!edit_tinge.getText().toString().trim().equals("")) {
+            String tinge_nm[] = getResources().getStringArray(R.array.tinge_arr);
+            String tinge_val[] = getResources().getStringArray(R.array.tinge_arr_val);
+            String Ans = edit_tinge.getText().toString().trim();
 
-            Url_Content.tinge_s=getReplacedStr(tinge_nm,tinge_val,Ans);
-        }
-        else
-        {
-            Url_Content.tinge_s="";
+            Url_Content.tinge_s = getReplacedStr(tinge_nm, tinge_val, Ans);
+        } else {
+            Url_Content.tinge_s = "";
         }
         //tbl inclusion
-        if(!edit_tbl_inclusion.getText().toString().trim().equals(""))
-        {
-            String tinge_nm[]=getResources().getStringArray(R.array.tinge_arr);
-            String tinge_val[]=getResources().getStringArray(R.array.tinge_arr_val);
-            String Ans=edit_tinge.getText().toString().trim();
+        if (!edit_tbl_inclusion.getText().toString().trim().equals("")) {
+            String tinge_nm[] = getResources().getStringArray(R.array.tinge_arr);
+            String tinge_val[] = getResources().getStringArray(R.array.tinge_arr_val);
+            String Ans = edit_tinge.getText().toString().trim();
 
-            Url_Content.tinge_s=getReplacedStr(tinge_nm,tinge_val,Ans);
-        }
-        else
-        {
-            Url_Content.tinge_s="";
+            Url_Content.tinge_s = getReplacedStr(tinge_nm, tinge_val, Ans);
+        } else {
+            Url_Content.tinge_s = "";
         }
         //side in
-        if(!edit_side_inclusion.getText().toString().trim().equals(""))
-        {
-            String side_in_nm[]=getResources().getStringArray(R.array.side_inclusion_array);
-            String side_in_val[]=getResources().getStringArray(R.array.side_inclusion_val);
-            String Ans=edit_side_inclusion.getText().toString().trim();
+        if (!edit_side_inclusion.getText().toString().trim().equals("")) {
+            String side_in_nm[] = getResources().getStringArray(R.array.side_inclusion_array);
+            String side_in_val[] = getResources().getStringArray(R.array.side_inclusion_val);
+            String Ans = edit_side_inclusion.getText().toString().trim();
 
-            Url_Content.side_inc_s=getReplacedStr(side_in_nm,side_in_val,Ans);
-        }
-        else
-        {
-            Url_Content.side_inc_s="";
+            Url_Content.side_inc_s = getReplacedStr(side_in_nm, side_in_val, Ans);
+        } else {
+            Url_Content.side_inc_s = "";
         }
         //open inc
-        if(!edit_open_inclusion.getText().toString().trim().equals(""))
-        {
-            String open_in_nm[]=getResources().getStringArray(R.array.open_inclusion_array);
-            String open_in_val[]=getResources().getStringArray(R.array.open_inclusion_val);
-            String Ans=edit_open_inclusion.getText().toString().trim();
+        if (!edit_open_inclusion.getText().toString().trim().equals("")) {
+            String open_in_nm[] = getResources().getStringArray(R.array.open_inclusion_array);
+            String open_in_val[] = getResources().getStringArray(R.array.open_inclusion_val);
+            String Ans = edit_open_inclusion.getText().toString().trim();
 
-            Url_Content.open_inc_s=getReplacedStr(open_in_nm,open_in_val,Ans);
-        }
-        else
-        {
-            Url_Content.open_inc_s="";
+            Url_Content.open_inc_s = getReplacedStr(open_in_nm, open_in_val, Ans);
+        } else {
+            Url_Content.open_inc_s = "";
         }
         //cavity
-        if(!edit_cavity.getText().toString().trim().equals(""))
-        {
-            String cavity_nm[]=getResources().getStringArray(R.array.Cravity_array);
-            String cavity_val[]=getResources().getStringArray(R.array.cavity_val);
-            String Ans=edit_cavity.getText().toString().trim();
+        if (!edit_cavity.getText().toString().trim().equals("")) {
+            String cavity_nm[] = getResources().getStringArray(R.array.Cravity_array);
+            String cavity_val[] = getResources().getStringArray(R.array.cavity_val);
+            String Ans = edit_cavity.getText().toString().trim();
 
-            Url_Content.cravity_s=getReplacedStr(cavity_nm,cavity_val,Ans);
-        }
-        else
-        {
-            Url_Content.cravity_s="";
+            Url_Content.cravity_s = getReplacedStr(cavity_nm, cavity_val, Ans);
+        } else {
+            Url_Content.cravity_s = "";
         }
         //natural
-        if(!edit_natural.getText().toString().trim().equals(""))
-        {
-            String natural_nm[]=getResources().getStringArray(R.array.natural_array);
-            String natural_val[]=getResources().getStringArray(R.array.natural_val);
-            String Ans=edit_natural.getText().toString().trim();
+        if (!edit_natural.getText().toString().trim().equals("")) {
+            String natural_nm[] = getResources().getStringArray(R.array.natural_array);
+            String natural_val[] = getResources().getStringArray(R.array.natural_val);
+            String Ans = edit_natural.getText().toString().trim();
 
-            Url_Content.natural_s=getReplacedStr(natural_nm,natural_val,Ans);
-        }
-        else
-        {
-            Url_Content.natural_s="";
+            Url_Content.natural_s = getReplacedStr(natural_nm, natural_val, Ans);
+        } else {
+            Url_Content.natural_s = "";
         }
         //Indented Natural
-        if(!edit_inden_natural.getText().toString().trim().equals(""))
-        {
-            String in_natural_nm[]=getResources().getStringArray(R.array.Intended_natural_array);
-            String in_natural_val[]=getResources().getStringArray(R.array.Intended_natural_val);
-            String Ans=edit_inden_natural.getText().toString().trim();
+        if (!edit_inden_natural.getText().toString().trim().equals("")) {
+            String in_natural_nm[] = getResources().getStringArray(R.array.Intended_natural_array);
+            String in_natural_val[] = getResources().getStringArray(R.array.Intended_natural_val);
+            String Ans = edit_inden_natural.getText().toString().trim();
 
-            Url_Content.indented_natural_s=getReplacedStr(in_natural_nm,in_natural_val,Ans);
-        }
-        else
-        {
-            Url_Content.indented_natural_s="";
+            Url_Content.indented_natural_s = getReplacedStr(in_natural_nm, in_natural_val, Ans);
+        } else {
+            Url_Content.indented_natural_s = "";
         }
         //milky
-        if(!edit_milky.getText().toString().trim().equals(""))
-        {
-            String milky_nm[]=getResources().getStringArray(R.array.milky_array);
-            String milky_val[]=getResources().getStringArray(R.array.milky_val);
-            String Ans=edit_milky.getText().toString().trim();
+        if (!edit_milky.getText().toString().trim().equals("")) {
+            String milky_nm[] = getResources().getStringArray(R.array.milky_array);
+            String milky_val[] = getResources().getStringArray(R.array.milky_val);
+            String Ans = edit_milky.getText().toString().trim();
 
-            Url_Content.milky_frm=getReplacedStr(milky_nm,milky_val,Ans);
-        }
-        else
-        {
-            Url_Content.milky_frm="";
+            Url_Content.milky_frm = getReplacedStr(milky_nm, milky_val, Ans);
+        } else {
+            Url_Content.milky_frm = "";
         }
         //luster
-        if(!edit_luster.getText().toString().trim().equals(""))
-        {
-            String luster_nm[]=getResources().getStringArray(R.array.luster_array);
-            String luster_val[]=getResources().getStringArray(R.array.luster_val);
-            String Ans=edit_luster.getText().toString().trim();
+        if (!edit_luster.getText().toString().trim().equals("")) {
+            String luster_nm[] = getResources().getStringArray(R.array.luster_array);
+            String luster_val[] = getResources().getStringArray(R.array.luster_val);
+            String Ans = edit_luster.getText().toString().trim();
 
-            Url_Content.luster_frm=getReplacedStr(luster_nm,luster_val,Ans);
-        }
-        else
-        {
-            Url_Content.luster_frm="";
+            Url_Content.luster_frm = getReplacedStr(luster_nm, luster_val, Ans);
+        } else {
+            Url_Content.luster_frm = "";
         }
         //Extra facet
-        if(!edit_extra_facet.getText().toString().trim().equals(""))
-        {
-            String ex_facet_nm[]=getResources().getStringArray(R.array.extra_facet_array);
-            String ex_facet_val[]=getResources().getStringArray(R.array.extra_facet_val);
-            String Ans=edit_extra_facet.getText().toString().trim();
+        if (!edit_extra_facet.getText().toString().trim().equals("")) {
+            String ex_facet_nm[] = getResources().getStringArray(R.array.extra_facet_array);
+            String ex_facet_val[] = getResources().getStringArray(R.array.extra_facet_val);
+            String Ans = edit_extra_facet.getText().toString().trim();
 
-            Url_Content.extra_facet_s=getReplacedStr(ex_facet_nm,ex_facet_val,Ans);
-        }
-        else
-        {
-            Url_Content.extra_facet_s="";
+            Url_Content.extra_facet_s = getReplacedStr(ex_facet_nm, ex_facet_val, Ans);
+        } else {
+            Url_Content.extra_facet_s = "";
         }
         //girdle
-        if(!edit_girdle.getText().toString().trim().equals(""))
-        {
-            String girdle_nm[]=getResources().getStringArray(R.array.gridle_array);
-            String girdle_val[]=getResources().getStringArray(R.array.gridle_val);
-            String Ans=edit_girdle.getText().toString().trim();
+        if (!edit_girdle.getText().toString().trim().equals("")) {
+            String girdle_nm[] = getResources().getStringArray(R.array.gridle_array);
+            String girdle_val[] = getResources().getStringArray(R.array.gridle_val);
+            String Ans = edit_girdle.getText().toString().trim();
 
-            Url_Content.gridle_s=getReplacedStr(girdle_nm,girdle_val,Ans);
-        }
-        else
-        {
-            Url_Content.gridle_s="";
+            Url_Content.gridle_s = getReplacedStr(girdle_nm, girdle_val, Ans);
+        } else {
+            Url_Content.gridle_s = "";
         }
         //H&A
-        if(!edit_heart_arrow.getText().toString().trim().equals(""))
-        {
-            String hAndA_nm[]=getResources().getStringArray(R.array.heart_arrow_array);
-            String hAndA_val[]=getResources().getStringArray(R.array.heart_arrow_val);
-            String Ans=edit_heart_arrow.getText().toString().trim();
+        if (!edit_heart_arrow.getText().toString().trim().equals("")) {
+            String hAndA_nm[] = getResources().getStringArray(R.array.heart_arrow_array);
+            String hAndA_val[] = getResources().getStringArray(R.array.heart_arrow_val);
+            String Ans = edit_heart_arrow.getText().toString().trim();
 
-            Url_Content.hrt_arw_frm=getReplacedStr(hAndA_nm,hAndA_val,Ans);
-        }
-        else
-        {
-            Url_Content.hrt_arw_frm="";
+            Url_Content.hrt_arw_frm = getReplacedStr(hAndA_nm, hAndA_val, Ans);
+        } else {
+            Url_Content.hrt_arw_frm = "";
         }
         //eye clean
-        if(!edit_eye_clean.getText().toString().trim().equals(""))
-        {
-            String eyeClean_nm[]=getResources().getStringArray(R.array.eye_clean_array);
-            String eyeClean_val[]=getResources().getStringArray(R.array.eye_clean_val);
-            String Ans=edit_eye_clean.getText().toString().trim();
+        if (!edit_eye_clean.getText().toString().trim().equals("")) {
+            String eyeClean_nm[] = getResources().getStringArray(R.array.eye_clean_array);
+            String eyeClean_val[] = getResources().getStringArray(R.array.eye_clean_val);
+            String Ans = edit_eye_clean.getText().toString().trim();
 
-            Url_Content.eye_c_s=getReplacedStr(eyeClean_nm,eyeClean_val,Ans);
-        }
-        else
-        {
-            Url_Content.eye_c_s="";
+            Url_Content.eye_c_s = getReplacedStr(eyeClean_nm, eyeClean_val, Ans);
+        } else {
+            Url_Content.eye_c_s = "";
         }
         //culet
-        if(!edit_culet.getText().toString().trim().equals(""))
-        {
-            String culet_nm[]=getResources().getStringArray(R.array.culet_array);
-            String culet_val[]=getResources().getStringArray(R.array.culet_val);
-            String Ans=edit_culet.getText().toString().trim();
+        if (!edit_culet.getText().toString().trim().equals("")) {
+            String culet_nm[] = getResources().getStringArray(R.array.culet_array);
+            String culet_val[] = getResources().getStringArray(R.array.culet_val);
+            String Ans = edit_culet.getText().toString().trim();
 
-            Url_Content.culet_frm=getReplacedStr(culet_nm,culet_val,Ans);
-        }
-        else
-        {
-            Url_Content.culet_frm="";
+            Url_Content.culet_frm = getReplacedStr(culet_nm, culet_val, Ans);
+        } else {
+            Url_Content.culet_frm = "";
         }
         //graining
-        if(!edit_graining.getText().toString().trim().equals(""))
-        {
-            String graining_nm[]=getResources().getStringArray(R.array.graining_array);
-            String graining_val[]=getResources().getStringArray(R.array.graining_val);
-            String Ans=edit_graining.getText().toString().trim();
+        if (!edit_graining.getText().toString().trim().equals("")) {
+            String graining_nm[] = getResources().getStringArray(R.array.graining_array);
+            String graining_val[] = getResources().getStringArray(R.array.graining_val);
+            String Ans = edit_graining.getText().toString().trim();
 
-            Url_Content.graining_s=getReplacedStr(graining_nm,graining_val,Ans);
-        }
-        else
-        {
-            Url_Content.graining_s="";
+            Url_Content.graining_s = getReplacedStr(graining_nm, graining_val, Ans);
+        } else {
+            Url_Content.graining_s = "";
         }
 
         //stoneId
@@ -827,7 +780,6 @@ public class Single_stone_search extends AppCompatActivity implements View.OnCli
         }
 
     }
-
 
 
     public void plus_button() {

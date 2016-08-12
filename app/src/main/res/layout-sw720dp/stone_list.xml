@@ -82,7 +82,18 @@
             android:drawableTop="@drawable/list_view"
             android:text="Photo View"
             android:textColor="@color/black" />
-
+        <!--<Button
+            android:id="@+id/btn_listView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/grid_view"
+            android:text="List View"
+            android:textColor="@color/black"
+            android:visibility="gone"/>
+-->
         <Button
             android:id="@+id/btn_emailStone"
             android:layout_width="wrap_content"
@@ -106,8 +117,14 @@
             android:textColor="@color/black" />
 
     </LinearLayout>
-
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_stone_grid"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone"/>
     <LinearLayout
+        android:id="@+id/lout_header"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:background="@color/listview_header"
@@ -918,13 +935,14 @@
         </Custom.ObservableScrollView>
     </LinearLayout>
 
-    <fragment
-        android:name="Fragment.Frag_Bgm"
+    <FrameLayout
         android:id="@+id/frag_stone"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"></fragment>
+        android:layout_weight="1">
+    </FrameLayout>
     <LinearLayout
+        android:id="@+id/lout_footer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">

@@ -42,10 +42,6 @@
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
-            android:name=".Result_DiamondSearch"
-            android:screenOrientation="landscape"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity
             android:name=".Quick_search"
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar"></activity>
@@ -55,18 +51,6 @@
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".My_offers"
-            android:screenOrientation="landscape"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity
-            android:name=".Bgm_stone"
-            android:screenOrientation="landscape"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity
-            android:name=".New_Arrival"
-            android:screenOrientation="landscape"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity
-            android:name=".Revised_price"
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
