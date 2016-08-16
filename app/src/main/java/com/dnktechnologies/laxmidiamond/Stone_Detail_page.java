@@ -6,7 +6,9 @@ import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.view.ViewTreeObserver;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -32,11 +34,12 @@ import Handler.XmlHandler;
 /**
  * Created by parth on 8/4/2016.
  */
-public class Stone_Detail_page extends Activity {
+public class Stone_Detail_page extends Activity implements View.OnClickListener {
     LinearLayout lout_stone_detail, lout_qc_detail, lout_param_detail, lout_comment_detail;
     String[] stone_detail_Key, QC_detail, Parameter_detail, Comment;
     int width, height;
     String link;
+    Button btn_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,12 +50,13 @@ public class Stone_Detail_page extends Activity {
         lout_qc_detail = (LinearLayout) findViewById(R.id.lout_qc_detail);
         lout_param_detail = (LinearLayout) findViewById(R.id.lout_param_detail);
         lout_comment_detail = (LinearLayout) findViewById(R.id.lout_comment_detail);
+        btn_back= (Button) findViewById(R.id.btn_back);
 
         stone_detail_Key = getResources().getStringArray(R.array.d_detail_Key);
         QC_detail = getResources().getStringArray(R.array.QC_detail);
         Parameter_detail = getResources().getStringArray(R.array.Parameter_detail);
         Comment = getResources().getStringArray(R.array.Comment);
-
+        btn_back.setOnClickListener(this);
         link = GlobalApp.url + "GetSingleStoneDetail?StoneNo=" + GlobalApp.stone_id + "&UserID=" + GlobalApp.User_Id;
 //        Log.i("link", "" + link);
         new GetStoneDetail().execute(link);
@@ -87,6 +91,22 @@ public class Stone_Detail_page extends Activity {
         child.addView(text2, 0);
 
         linearLayout.addView(child);
+    }
+
+    @Override
+    public void onClick(View v) {
+        int id=v.getId();
+        switch (id)
+        {
+            case R.id.btn_back:
+            {
+                finish();
+            }
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
     }
 
     public class GetStoneDetail extends AsyncTask<String, Void, String> {
