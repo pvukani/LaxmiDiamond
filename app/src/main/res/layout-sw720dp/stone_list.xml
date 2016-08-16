@@ -117,12 +117,6 @@
             android:textColor="@color/black" />
 
     </LinearLayout>
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_stone_grid"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:background="@color/white"
-        android:visibility="gone"/>
     <LinearLayout
         android:id="@+id/lout_header"
         android:layout_width="match_parent"
@@ -137,6 +131,7 @@
 
             <CheckBox
                 android:id="@+id/cb_res_stone"
+                android:button="@drawable/ch_box"
                 android:layout_width="30dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_vertical"
@@ -934,6 +929,14 @@
             </LinearLayout>
         </Custom.ObservableScrollView>
     </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_stone_grid"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:visibility="gone"/>
 
     <FrameLayout
         android:id="@+id/frag_stone"

@@ -6,17 +6,22 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import Adapter.Adapter_grid;
+import Adapter.Adapter_result_stone;
 import Dialog.Logout_Dialog;
 import Fragment.*;
 
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.support.v7.widget.RecyclerView;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by parth on 8/10/2016.
@@ -25,11 +30,12 @@ public class Stone_List extends Activity implements View.OnClickListener {
 
     Button btn_home, btn_logout, btn_placeOrder, btn_addtoTrack, btn_addTocart, btn_gridView, btn_emailStone;
     Adapter_grid adapter_grid;
+    Adapter_result_stone adapter_result_stone;
     LinearLayout lout_header, lout_footer;
     FrameLayout frag_stone;
     RecyclerView rv_stone_grid;
     GridLayoutManager gridLayoutManager;
-
+    RecyclerView.LayoutManager layoutManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +52,7 @@ public class Stone_List extends Activity implements View.OnClickListener {
         lout_footer = (LinearLayout) findViewById(R.id.lout_footer);
         frag_stone = (FrameLayout) findViewById(R.id.frag_stone);
         rv_stone_grid = (RecyclerView) findViewById(R.id.rv_stone_grid);
+        layoutManager=new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.VERTICAL,false);
         setFragment();
         gridLayoutManager = new GridLayoutManager(getApplicationContext(), 4);
         btn_home.setOnClickListener(this);
@@ -74,26 +81,27 @@ public class Stone_List extends Activity implements View.OnClickListener {
             }
             case R.id.btn_gridView: {
 
-                if(btn_gridView.isSelected())
-                {
+                if (btn_gridView.isSelected()) {
                     btn_gridView.setSelected(false);
                     btn_gridView.setCompoundDrawablesRelativeWithIntrinsicBounds(0, R.drawable.list_view, 0, 0);
                     btn_gridView.setText("Photo View");
                     lout_header.setVisibility(View.VISIBLE);
-                    lout_footer.setVisibility(View.VISIBLE);
                     frag_stone.setVisibility(View.VISIBLE);
-                    rv_stone_grid.setVisibility(View.GONE);
-                }
-                else {
+                    lout_footer.setVisibility(View.VISIBLE);
+                    rv_stone_grid.setLayoutManager(layoutManager);
+                    adapter_result_stone=new Adapter_result_stone(this,GlobalApp.Arr_for_grid,GlobalApp.map_result);
+                    rv_stone_grid.setAdapter(adapter_result_stone);
+
+                } else {
                     btn_gridView.setSelected(true);
-                    btn_gridView.setCompoundDrawablesRelativeWithIntrinsicBounds(0,R.drawable.grid_view,0,0);
+                    btn_gridView.setCompoundDrawablesRelativeWithIntrinsicBounds(0, R.drawable.grid_view, 0, 0);
                     btn_gridView.setText("List View");
                     lout_header.setVisibility(View.GONE);
-                    lout_footer.setVisibility(View.GONE);
                     frag_stone.setVisibility(View.GONE);
+                    lout_footer.setVisibility(View.GONE);
                     rv_stone_grid.setVisibility(View.VISIBLE);
                     rv_stone_grid.setLayoutManager(gridLayoutManager);
-                    adapter_grid = new Adapter_grid(this, GlobalApp.Arr_for_grid);
+                    adapter_grid = new Adapter_grid(this, GlobalApp.Arr_for_grid, GlobalApp.map_result);
                     rv_stone_grid.setAdapter(adapter_grid);
                 }
             }

@@ -103,7 +103,8 @@ public class Frag_new_Arrival extends android.app.Fragment{
             GlobalApp.Arr_newArr_stone.addAll(itemsList);
             GlobalApp.Arr_for_grid.clear();
             GlobalApp.Arr_for_grid.addAll(GlobalApp.Arr_newArr_stone);
-            ad_new_arrival = new Adapter_result_stone(getActivity(),GlobalApp.Arr_newArr_stone);
+            GlobalApp.map_result.clear();
+            ad_new_arrival = new Adapter_result_stone(getActivity(),GlobalApp.Arr_newArr_stone,GlobalApp.map_result);
             rv_new_arr.setAdapter(ad_new_arrival);
             progress_dialog.dismiss();
 //            Log.i("Size",""+itemsList.size());

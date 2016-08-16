@@ -19,7 +19,9 @@ import com.dnktechnologies.laxmidiamond.Stone_Detail_page;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import Bean.Model;
 
@@ -29,10 +31,12 @@ import Bean.Model;
 public class Adapter_grid extends RecyclerView.Adapter<Adapter_grid.Holder> {
     List<Model> arr_for_grid = new ArrayList<Model>();
     Activity activity;
+    Map<Integer,Boolean> map_res_stone;
 
-    public Adapter_grid(Activity activity, List<Model> arr_for_grid) {
+    public Adapter_grid(Activity activity, List<Model> arr_for_grid,Map<Integer, Boolean> map_res_stone) {
         this.arr_for_grid = arr_for_grid;
         this.activity = activity;
+        this.map_res_stone=map_res_stone;
     }
 
     @Override
@@ -60,20 +64,41 @@ public class Adapter_grid extends RecyclerView.Adapter<Adapter_grid.Holder> {
 
             }
         });
+        if(map_res_stone.size()!=0)
+        {
+            if(map_res_stone.containsKey(pos) && map_res_stone.get(pos))
+            {
+                holder.lout_root.setBackgroundColor(ContextCompat.getColor(activity, R.color.my));
+                holder.cb_stone.setChecked(true);
+                holder.lout_root.setSelected(true);
+                map_res_stone.put(pos,true);
+            }
+            else
+            {
+                holder.lout_root.setBackground(ContextCompat.getDrawable(activity, R.drawable.border_line));
+                holder.cb_stone.setChecked(false);
+                holder.lout_root.setSelected(false);
+                map_res_stone.put(pos,false);
+            }
+        }
         holder.lout_root.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(holder.lout_root.isSelected())
+                LinearLayout layout=(LinearLayout)v;
+                CheckBox checkBox=(CheckBox)v.findViewById(R.id.cb_stone);
+                if(v.isSelected())
                 {
-                    holder.lout_root.setBackground(ContextCompat.getDrawable(activity,R.drawable.border_line));
-                    holder.cb_stone.setChecked(false);
-                    holder.lout_root.setSelected(false);
+                    layout.setBackground(ContextCompat.getDrawable(activity,R.drawable.border_line));
+                    checkBox.setChecked(false);
+                    map_res_stone.put(pos, false);
+                    v.setSelected(false);
                 }
                 else
                 {
-                    holder.lout_root.setBackgroundColor(ContextCompat.getColor(activity,R.color.my));
-                    holder.cb_stone.setChecked(true);
-                    holder.lout_root.setSelected(true);
+                    layout.setBackgroundColor(ContextCompat.getColor(activity,R.color.my));
+                    checkBox.setChecked(true);
+                    map_res_stone.put(pos,true);
+                    v.setSelected(true);
                 }
 
             }

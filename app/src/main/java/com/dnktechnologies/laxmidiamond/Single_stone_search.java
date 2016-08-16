@@ -91,6 +91,14 @@ public class Single_stone_search extends AppCompatActivity implements View.OnCli
         setContentView(R.layout.single_stone_search);
 
         FindViewById();
+        if(GlobalApp.flag_fancy)
+        {
+            chb_white.setChecked(false);
+            chb_fancy.setChecked(true);
+            lout_for_white.setVisibility(View.VISIBLE);
+            lout_for_fancy.setVisibility(View.GONE);
+
+        }
         bundle = new Bundle();
 
         nm_cps = getResources().getStringArray(R.array.diamond_cut_polish_sym_names);
@@ -208,6 +216,13 @@ public class Single_stone_search extends AppCompatActivity implements View.OnCli
         chb_fancy.setOnClickListener(this);
         cb_only_bgm.setOnClickListener(this);
         cb_no_bgm.setOnClickListener(this);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+        GlobalApp.flag_fancy=false;
     }
 
     private void FindViewById() {

@@ -23,6 +23,8 @@ import org.xml.sax.XMLReader;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -42,11 +44,12 @@ public class Frag_Bgm extends android.app.Fragment {
     String link;
     Adapter_result_stone ad_bgm_stone;
     View view;
-
+//    HashMap<Integer,Boolean> MAP_Res_Stone;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.frag_stonelist, container, false);
+//        MAP_Res_Stone=new HashMap<Integer,Boolean>();
         FindViewByID();
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         rv_bgmStone.setLayoutManager(layoutManager);
@@ -107,7 +110,8 @@ public class Frag_Bgm extends android.app.Fragment {
             GlobalApp.Arr_Bgm_stone.addAll(itemsList);
             GlobalApp.Arr_for_grid.clear();
             GlobalApp.Arr_for_grid.addAll(GlobalApp.Arr_Bgm_stone);
-            ad_bgm_stone = new Adapter_result_stone(getActivity(), GlobalApp.Arr_Bgm_stone);
+            GlobalApp.map_result.clear();
+            ad_bgm_stone = new Adapter_result_stone(getActivity(), GlobalApp.Arr_Bgm_stone,GlobalApp.map_result);
             rv_bgmStone.setAdapter(ad_bgm_stone);
             progress_dialog.dismiss();
 

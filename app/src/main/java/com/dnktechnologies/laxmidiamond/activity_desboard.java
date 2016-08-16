@@ -36,6 +36,7 @@ public class activity_desboard extends AppCompatActivity implements View.OnClick
         bundle = new Bundle();
 
         single_stone_search.setOnClickListener(this);
+        fancy_color_search.setOnClickListener(this);
         lout_logout.setOnClickListener(this);
         quick_search.setOnClickListener(this);
         my_cart.setOnClickListener(this);
@@ -56,6 +57,12 @@ public class activity_desboard extends AppCompatActivity implements View.OnClick
         switch (id) {
             case R.id.single_stone_search: {
                 Intent in = new Intent(activity_desboard.this, Single_stone_search.class);
+                startActivity(in);
+                break;
+            }
+            case R.id.fancy_color_search: {
+                GlobalApp.flag_fancy = true;
+                Intent in = new Intent(this, Single_stone_search.class);
                 startActivity(in);
                 break;
             }

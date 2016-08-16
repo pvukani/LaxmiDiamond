@@ -9,6 +9,7 @@ import android.text.style.ForegroundColorSpan;
 import android.widget.EditText;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import Bean.Model;
@@ -43,7 +44,7 @@ public class GlobalApp {
     static String msg_login_uname = "UserName not Shound be Empty";
     static String msg_login_pass = "Password not Shound be Empty";
     public static String title = "LaxmiDiamond";
-
+    public static HashMap<Integer,Boolean> map_result=new HashMap<Integer, Boolean>();
 
     public  static  String User_Id = "";
     public static List<Model> arr_model_list = new ArrayList<Model>();
@@ -63,6 +64,8 @@ public class GlobalApp {
     public static List<Model> Ar_List_quick=new ArrayList<Model>();
     public static String msg_unauto = "Sorry...Ur Not Authorised";
     public static String msg_reg_prefix = "PLZ Select prefix";
+
+    public static boolean flag_fancy=false;
 
 
     public static boolean CheckInternetConnection(Activity context) {

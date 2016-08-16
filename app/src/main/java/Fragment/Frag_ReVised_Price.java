@@ -105,7 +105,8 @@ public class Frag_ReVised_Price extends android.app.Fragment {
             GlobalApp.Arr_revised_stone.addAll(itemsList);
             GlobalApp.Arr_for_grid.clear();
             GlobalApp.Arr_for_grid.addAll(GlobalApp.Arr_revised_stone);
-            ad_revised_stone = new Adapter_result_stone(getActivity(), GlobalApp.Arr_revised_stone);
+            GlobalApp.map_result.clear();
+            ad_revised_stone = new Adapter_result_stone(getActivity(), GlobalApp.Arr_revised_stone,GlobalApp.map_result);
             rv_revisedPR.setAdapter(ad_revised_stone);
             progress_dialog.dismiss();
         }

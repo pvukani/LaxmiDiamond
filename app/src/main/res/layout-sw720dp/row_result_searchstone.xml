@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".Stone_List">
 
 
     <LinearLayout
+        android:id="@+id/lout_row"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:orientation="horizontal">
 
         <CheckBox
-            android:id="@+id/cb_res_stone"
+            android:id="@+id/cb_stone"
+            android:clickable="false"
+            android:focusable="false"
+            android:button="@drawable/ch_box"
             android:layout_width="30dp"
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"

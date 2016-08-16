@@ -103,11 +103,12 @@ public class Frag_Result_stone extends android.app.Fragment{
             GlobalApp.Arr_Result_stone.addAll(itemsList);
             GlobalApp.Arr_for_grid.clear();
             GlobalApp.Arr_for_grid.addAll(GlobalApp.Arr_Result_stone);
+            GlobalApp.map_result.clear();
             if (null != GlobalApp.Arr_Result_stone.get(0).getErrormessage()) {
                 new OK_Dialog(getActivity(), GlobalApp.msg_noResult);
                 progress_dialog.dismiss();
             } else {
-                adapter_result_stone = new Adapter_result_stone(getActivity(), GlobalApp.Arr_Result_stone);
+                adapter_result_stone = new Adapter_result_stone(getActivity(), GlobalApp.Arr_Result_stone,GlobalApp.map_result);
                 rv_result_stone.setAdapter(adapter_result_stone);
                 progress_dialog.dismiss();
             }
