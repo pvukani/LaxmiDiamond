@@ -26,6 +26,16 @@ public class Model {
     String fluorescencecolor;
     String liveraparate;
     String websitediscount;
+    String shape_color,isfirstrow,isfancy,column1,column2;
+    String totalpage;
+
+    public String getTotalpage() {
+        return totalpage;
+    }
+
+    public void setTotalpage(String totalpage) {
+        this.totalpage = totalpage;
+    }
 
     public String getLaserinscription() {
         return laserinscription;
@@ -33,6 +43,46 @@ public class Model {
 
     public void setLaserinscription(String laserinscription) {
         this.laserinscription = laserinscription;
+    }
+
+    public String getShape_color() {
+        return shape_color;
+    }
+
+    public void setShape_color(String shape_color) {
+        this.shape_color = shape_color;
+    }
+
+    public String getIsfirstrow() {
+        return isfirstrow;
+    }
+
+    public void setIsfirstrow(String isfirstrow) {
+        this.isfirstrow = isfirstrow;
+    }
+
+    public String getIsfancy() {
+        return isfancy;
+    }
+
+    public void setIsfancy(String isfancy) {
+        this.isfancy = isfancy;
+    }
+
+    public String getColumn1() {
+        return column1;
+    }
+
+    public void setColumn1(String column1) {
+        this.column1 = column1;
+    }
+
+    public String getColumn2() {
+        return column2;
+    }
+
+    public void setColumn2(String column2) {
+        this.column2 = column2;
     }
 
     public String getShade() {

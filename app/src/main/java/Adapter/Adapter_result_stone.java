@@ -59,9 +59,9 @@ public class Adapter_result_stone extends RecyclerView.Adapter<Adapter_result_st
     public void onBindViewHolder(final Adapter_result_stone.ViewAdapter holder, int position) {
         final int pos = position;
         if ((pos % 2) == 0) {
-            holder.lout_row.setBackgroundColor(Color.parseColor("#C8E6FF"));
+            holder.lout_row.setBackgroundColor(activity.getResources().getColor(R.color.my));
         } else {
-            holder.lout_row.setBackgroundColor(Color.parseColor("#FFFFFF"));
+            holder.lout_row.setBackgroundColor(activity.getResources().getColor(R.color.white));
         }
         holder.txt_srno.setText(String.valueOf(pos + 1));
         holder.txt_status.setText("AVAILABLE");
@@ -106,15 +106,15 @@ public class Adapter_result_stone extends RecyclerView.Adapter<Adapter_result_st
         });
         if (map_res_Stone.size() != 0) {
             if (map_res_Stone.containsKey(pos) && map_res_Stone.get(pos)) {
-                holder.lout_row.setBackgroundColor(ContextCompat.getColor(activity, R.color.Blue));
+                holder.lout_row.setBackgroundColor(activity.getResources().getColor(R.color.Blue));
                 holder.lout_row.setSelected(true);
                 holder.cb_stone.setChecked(true);
                 map_res_Stone.put(pos, true);
             } else {
                 if ((pos % 2) == 0) {
-                    holder.lout_row.setBackgroundColor(Color.parseColor("#C8E6FF"));
+                    holder.lout_row.setBackgroundColor(activity.getResources().getColor(R.color.my));
                 } else {
-                    holder.lout_row.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                    holder.lout_row.setBackgroundColor(activity.getResources().getColor(R.color.white));
                 }
                 holder.lout_row.setSelected(false);
                 holder.cb_stone.setChecked(false);

@@ -76,7 +76,9 @@ public class activity_desboard extends AppCompatActivity implements View.OnClick
                 break;
             }
             case R.id.my_cart: {
-                Intent in = new Intent(this, My_cart.class);
+                Intent in = new Intent(this, Stone_List.class);
+                bundle.putString(parent, "CART");
+                in.putExtras(bundle);
                 startActivity(in);
                 break;
             }

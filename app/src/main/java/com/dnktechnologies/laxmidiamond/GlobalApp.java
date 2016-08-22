@@ -19,8 +19,10 @@ import Dialog.*;
  * Created by parth on 6/21/2016.
  */
 public class GlobalApp {
+    public static int current_page=1;
     public static String stone_id;
     public static List<Model> Arr_for_grid=new ArrayList<Model>();
+    public static List<Model> Arr_quick_data=new ArrayList<Model>();
     public static ArrayList<String> List_stone_detail_val=new ArrayList<String>();
     public static ArrayList<String> List_QC_detail_val=new ArrayList<String>();
     public static ArrayList<String> List_param_detail_val=new ArrayList<String>();
@@ -103,7 +105,7 @@ public class GlobalApp {
     }
     public static String obtainLink() {
         link = GlobalApp.url + "GetSingleStoneSearch?"
-                + "" + "PageNo=1"
+                + "" + "PageNo="+GlobalApp.current_page
                 + "&ShapeIDList=" + Url_Content.shap + "&LabIDList="
                 + Url_Content.lap + "&ColorIDList=" + Url_Content.color
                 + "&ClarityIDList=" + Url_Content.clarity + "&CaratList="

@@ -93,6 +93,7 @@
             android:background="@color/white" />
 
         <Custom.Custom_Font_TextView
+            android:id="@+id/txt_header_1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -106,6 +107,7 @@
             android:background="@color/white" />
 
         <Custom.Custom_Font_TextView
+            android:id="@+id/txt_header_2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -114,16 +116,16 @@
             android:textColor="@color/white" />
 
 
-
         <View
             android:layout_width="2dp"
             android:layout_height="match_parent"
             android:background="@color/white" />
 
         <Custom.Custom_Font_TextView
-            android:layout_weight="1"
+            android:id="@+id/txt_header_3"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:gravity="center"
             android:text="0.40\nTo\n0.49"
             android:textColor="@color/white" />
@@ -134,9 +136,10 @@
             android:background="@color/white" />
 
         <Custom.Custom_Font_TextView
-            android:layout_weight="1"
+            android:id="@+id/txt_header_4"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:gravity="center"
             android:text="0.50\nTo\n0.59"
             android:textColor="@color/white" />
@@ -147,9 +150,10 @@
             android:background="@color/white" />
 
         <Custom.Custom_Font_TextView
-            android:layout_weight="1"
+            android:id="@+id/txt_header_5"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:gravity="center"
             android:text="0.60\nTo\n0.69"
             android:textColor="@color/white" />
@@ -160,9 +164,10 @@
             android:background="@color/white" />
 
         <Custom.Custom_Font_TextView
-            android:layout_weight="1"
+            android:id="@+id/txt_header_6"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:gravity="center"
             android:text="0.70\nTo\n0.89"
             android:textColor="@color/white" />
@@ -173,39 +178,40 @@
             android:background="@color/white" />
 
         <Custom.Custom_Font_TextView
-            android:layout_weight="1"
+            android:id="@+id/txt_header_7"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:gravity="center"
             android:text="0.90\nTo\n0.99"
             android:textColor="@color/white" />
 
 
-
         <View
             android:layout_width="2dp"
             android:layout_height="match_parent"
             android:background="@color/white" />
 
         <Custom.Custom_Font_TextView
-            android:layout_weight="1"
+            android:id="@+id/txt_header_8"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:gravity="center"
             android:text="1.00\nTo\n1.49"
             android:textColor="@color/white" />
 
 
-
         <View
             android:layout_width="2dp"
             android:layout_height="match_parent"
             android:background="@color/white" />
 
         <Custom.Custom_Font_TextView
-            android:layout_weight="1"
+            android:id="@+id/txt_header_9"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:gravity="center"
             android:text="1.50\nTo\n1.99"
             android:textColor="@color/white" />
@@ -216,9 +222,10 @@
             android:background="@color/white" />
 
         <Custom.Custom_Font_TextView
+            android:id="@+id/txt_header_10"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:gravity="center"
             android:text="2.00\nTo\n2.99"
             android:textColor="@color/white" />
@@ -229,9 +236,10 @@
             android:background="@color/white" />
 
         <Custom.Custom_Font_TextView
-            android:layout_weight="1"
+            android:id="@+id/txt_header_11"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:gravity="center"
             android:text="3.00\nTo\n3.99"
             android:textColor="@color/white" />
@@ -242,9 +250,10 @@
             android:background="@color/white" />
 
         <Custom.Custom_Font_TextView
-            android:layout_weight="1"
+            android:id="@+id/txt_header_12"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:gravity="center"
             android:text="4.00\nTo\n4.99"
             android:textColor="@color/white" />
@@ -255,9 +264,10 @@
             android:background="@color/white" />
 
         <Custom.Custom_Font_TextView
-            android:layout_weight="1"
+            android:id="@+id/txt_header_13"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:gravity="center"
             android:text="5.00\nTo\n100.00"
             android:textColor="@color/white" />
@@ -270,5 +280,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-         />
+        />
 </LinearLayout>

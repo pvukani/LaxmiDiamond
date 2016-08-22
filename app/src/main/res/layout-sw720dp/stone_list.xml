@@ -931,19 +931,19 @@
     </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_stone_grid"
+        android:id="@+id/rv_stone"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="@color/white"
-        android:visibility="gone"/>
+        />
 
-    <FrameLayout
+    <!--<FrameLayout
         android:id="@+id/frag_stone"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
-    </FrameLayout>
+        android:layout_weight="1">-->
+    <!--</FrameLayout>-->
     <LinearLayout
         android:id="@+id/lout_footer"
         android:layout_width="match_parent"

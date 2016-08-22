@@ -17,6 +17,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
@@ -55,7 +56,7 @@ public class Single_stone_search extends AppCompatActivity implements View.OnCli
     HashMap<Integer, Boolean> Map_clarity = new HashMap<Integer, Boolean>();
     HashMap<Integer, Boolean> Map_f_intencity = new HashMap<Integer, Boolean>();
     HashMap<Integer, Boolean> Map_f_color = new HashMap<Integer, Boolean>();
-
+    ScrollView main_scroll;
     String[] nm_cps, nm_f_color, nm_f_intensity, nm_color, nm_clarity, nm_shape, nm_lab;
     public static String[] recy_item;
     RecyclerView recy_img_shape, recView_lab, recView_cut, recView_polish,
@@ -295,6 +296,7 @@ public class Single_stone_search extends AppCompatActivity implements View.OnCli
         chb_3x = (CheckBox) findViewById(R.id.chb_3x);
         chb_2x = (CheckBox) findViewById(R.id.chb_2x);
 
+        main_scroll= (ScrollView) findViewById(R.id.main_scroll);
 
     }
 
@@ -822,6 +824,7 @@ public class Single_stone_search extends AppCompatActivity implements View.OnCli
     }
 
     public void doreset() {
+        main_scroll.smoothScrollTo(0,0);
         Adapter_lab.notifyDataSetChanged();
         Adapter_shape.notifyDataSetChanged();
         adapter_cut.notifyDataSetChanged();

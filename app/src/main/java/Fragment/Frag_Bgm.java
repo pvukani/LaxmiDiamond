@@ -44,7 +44,8 @@ public class Frag_Bgm extends android.app.Fragment {
     String link;
     Adapter_result_stone ad_bgm_stone;
     View view;
-//    HashMap<Integer,Boolean> MAP_Res_Stone;
+
+    //    HashMap<Integer,Boolean> MAP_Res_Stone;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -111,8 +112,12 @@ public class Frag_Bgm extends android.app.Fragment {
             GlobalApp.Arr_for_grid.clear();
             GlobalApp.Arr_for_grid.addAll(GlobalApp.Arr_Bgm_stone);
             GlobalApp.map_result.clear();
-            ad_bgm_stone = new Adapter_result_stone(getActivity(), GlobalApp.Arr_Bgm_stone,GlobalApp.map_result);
-            rv_bgmStone.setAdapter(ad_bgm_stone);
+//            GlobalApp.ttl_pages = Integer.parseInt(GlobalApp.Arr_for_grid.get(0).getTotalpage().toString());
+
+//            Log.i("kkkk", "" + GlobalApp.ttl_pages);
+
+          /*  ad_bgm_stone = new Adapter_result_stone(getActivity(), GlobalApp.Arr_Bgm_stone, GlobalApp.map_result);
+            rv_bgmStone.setAdapter(ad_bgm_stone);*/
             progress_dialog.dismiss();
 
         }

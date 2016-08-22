@@ -43,7 +43,8 @@ public class XmlHandler extends DefaultHandler {
         if (localName.equalsIgnoreCase("table")) {
             item = new Model();
         } else if (localName.equalsIgnoreCase("record")) {
-
+            item = new Model();
+        }else if (localName.equalsIgnoreCase("ROW")) {
             item = new Model();
         }
     }
@@ -57,7 +58,7 @@ public class XmlHandler extends DefaultHandler {
 
         if (localName.equalsIgnoreCase("country_id")) {
             item.setCountry_id(currentValue);
-        }else if (localName.equalsIgnoreCase("errormessage")) {
+        } else if (localName.equalsIgnoreCase("errormessage")) {
             item.setErrormessage(currentValue);
         } else if (localName.equalsIgnoreCase("countryname")) {
             item.setCountry_name(currentValue);
@@ -65,33 +66,33 @@ public class XmlHandler extends DefaultHandler {
             item.setState_id(currentValue);
         } else if (localName.equalsIgnoreCase("statename")) {
             item.setStatename(currentValue);
-        }else if (localName.equalsIgnoreCase("shade")) {
+        } else if (localName.equalsIgnoreCase("shade")) {
             item.setShade(currentValue);
-        }else if (localName.equalsIgnoreCase("tableinclusion")) {
+        } else if (localName.equalsIgnoreCase("tableinclusion")) {
             item.setTableinclusion(currentValue);
-        }else if (localName.equalsIgnoreCase("sideinclusion")) {
+        } else if (localName.equalsIgnoreCase("sideinclusion")) {
             item.setSideinclusion(currentValue);
         } else if (localName.equalsIgnoreCase("username")) {
             item.setUsername(currentValue);
-        }else if (localName.equalsIgnoreCase("graining")) {
+        } else if (localName.equalsIgnoreCase("graining")) {
             item.setGraining(currentValue);
-        }else if (localName.equalsIgnoreCase("availibility")) {
+        } else if (localName.equalsIgnoreCase("availibility")) {
             item.setAvailibility(currentValue);
-        }else if (localName.equalsIgnoreCase("starlength")) {
+        } else if (localName.equalsIgnoreCase("starlength")) {
             item.setStarlength(currentValue);
-        }else if (localName.equalsIgnoreCase("lowerhalve")) {
+        } else if (localName.equalsIgnoreCase("lowerhalve")) {
             item.setLowerhalve(currentValue);
-        }else if (localName.equalsIgnoreCase("openinclusion")) {
+        } else if (localName.equalsIgnoreCase("openinclusion")) {
             item.setOpeninclusion(currentValue);
-        }else if (localName.equalsIgnoreCase("extrafacet")) {
+        } else if (localName.equalsIgnoreCase("extrafacet")) {
             item.setExtrafacet(currentValue);
-        }else if (localName.equalsIgnoreCase("natural")) {
+        } else if (localName.equalsIgnoreCase("natural")) {
             item.setNatural(currentValue);
         } else if (localName.equalsIgnoreCase("title")) {
             item.setTitle(currentValue);
         } else if (localName.equalsIgnoreCase("webstatus")) {
             item.setWebstatus(currentValue);
-        }  else if (localName.equalsIgnoreCase("stone_no")) {
+        } else if (localName.equalsIgnoreCase("stone_no")) {
             item.setStone_no(currentValue);
         } else if (localName.equalsIgnoreCase("laboratory")) {
             item.setLaboratory(currentValue);
@@ -133,9 +134,9 @@ public class XmlHandler extends DefaultHandler {
             item.setMeasurement(currentValue);
         } else if (localName.equalsIgnoreCase("totaldepthper")) {
             item.setTotaldepthper(currentValue);
-        }  else if (localName.equalsIgnoreCase("locationname")) {
+        } else if (localName.equalsIgnoreCase("locationname")) {
             item.setLocationname(currentValue);
-        }else if (localName.equalsIgnoreCase("handa")) {
+        } else if (localName.equalsIgnoreCase("handa")) {
             item.setHanda(currentValue);
         } else if (localName.equalsIgnoreCase("blackinclusion")) {
             item.setBlackinclusion(currentValue);
@@ -143,7 +144,7 @@ public class XmlHandler extends DefaultHandler {
             item.setTinge(currentValue);
         } else if (localName.equalsIgnoreCase("milky")) {
             item.setMilky(currentValue);
-        }else if (localName.equalsIgnoreCase("luster")) {
+        } else if (localName.equalsIgnoreCase("luster")) {
             item.setLuster(currentValue);
         } else if (localName.equalsIgnoreCase("eyeclean")) {
             item.setEyeclean(currentValue);
@@ -157,13 +158,13 @@ public class XmlHandler extends DefaultHandler {
             item.setPavillionangle(currentValue);
         } else if (localName.equalsIgnoreCase("keytosymbols")) {
             item.setKeytosymbols(currentValue);
-        }else if (localName.equalsIgnoreCase("imageexist")) {
+        } else if (localName.equalsIgnoreCase("imageexist")) {
             item.setImageexist(currentValue);
         } else if (localName.equalsIgnoreCase("certificateexist")) {
             item.setCertificateexist(currentValue);
-        }else if (localName.equalsIgnoreCase("videoexist")) {
+        } else if (localName.equalsIgnoreCase("videoexist")) {
             item.setVideoexist(currentValue);
-        }else if (localName.equalsIgnoreCase("imageurl")) {
+        } else if (localName.equalsIgnoreCase("imageurl")) {
             item.setImageurl(currentValue);
         } else if (localName.equalsIgnoreCase("certificateurl")) {
             item.setCertificateurl(currentValue);
@@ -177,6 +178,8 @@ public class XmlHandler extends DefaultHandler {
             item.setPagesize(currentValue);
         } else if (localName.equalsIgnoreCase("totalpages")) {
             item.setTotalpages(currentValue);
+        }else if (localName.equalsIgnoreCase("totalpage")) {
+            item.setTotalpage(currentValue);
         } else if (localName.equalsIgnoreCase("laserinscription")) {
             item.setLaserinscription(currentValue);
         } else if (localName.equalsIgnoreCase("luster")) {
@@ -219,43 +222,55 @@ public class XmlHandler extends DefaultHandler {
             item.setOfferavgrate(currentValue);
         } else if (localName.equalsIgnoreCase("offertotalamount")) {
             item.setOffertotalamount(currentValue);
-        }else if (localName.equalsIgnoreCase("STEP1")) {
+        } else if (localName.equalsIgnoreCase("STEP1")) {
             item.setSTEP1(currentValue);
-        }else if (localName.equalsIgnoreCase("STEP2")) {
+        } else if (localName.equalsIgnoreCase("STEP2")) {
             item.setSTEP2(currentValue);
-        }else if (localName.equalsIgnoreCase("STEP3")) {
+        } else if (localName.equalsIgnoreCase("STEP3")) {
             item.setSTEP3(currentValue);
-        }else if (localName.equalsIgnoreCase("STEP4")) {
+        } else if (localName.equalsIgnoreCase("STEP4")) {
             item.setSTEP4(currentValue);
-        }else if (localName.equalsIgnoreCase("STEP5")) {
+        } else if (localName.equalsIgnoreCase("STEP5")) {
             item.setSTEP5(currentValue);
-        }else if (localName.equalsIgnoreCase("STEP6")) {
+        } else if (localName.equalsIgnoreCase("STEP6")) {
             item.setSTEP6(currentValue);
-        }else if (localName.equalsIgnoreCase("STEP7")) {
+        } else if (localName.equalsIgnoreCase("STEP7")) {
             item.setSTEP7(currentValue);
-        }else if (localName.equalsIgnoreCase("STEP8")) {
+        } else if (localName.equalsIgnoreCase("STEP8")) {
             item.setSTEP8(currentValue);
-        }else if (localName.equalsIgnoreCase("STEP9")) {
+        } else if (localName.equalsIgnoreCase("STEP9")) {
             item.setSTEP9(currentValue);
-        }else if (localName.equalsIgnoreCase("STEP10")) {
+        } else if (localName.equalsIgnoreCase("STEP10")) {
             item.setSTEP10(currentValue);
-        }else if (localName.equalsIgnoreCase("STEP11")) {
+        } else if (localName.equalsIgnoreCase("STEP11")) {
             item.setSTEP11(currentValue);
-        }else if (localName.equalsIgnoreCase("STEP12")) {
+        } else if (localName.equalsIgnoreCase("STEP12")) {
             item.setSTEP12(currentValue);
-        }else if (localName.equalsIgnoreCase("STEP13")) {
+        } else if (localName.equalsIgnoreCase("STEP13")) {
             item.setSTEP13(currentValue);
-        }else if (localName.equalsIgnoreCase("girdle")) {
+        } else if (localName.equalsIgnoreCase("girdle")) {
             item.setGirdle(currentValue);
-        }else if (localName.equalsIgnoreCase("culetsize")) {
+        } else if (localName.equalsIgnoreCase("culetsize")) {
             item.setCuletsize(currentValue);
-        }else if (localName.equalsIgnoreCase("cavity")) {
+        } else if (localName.equalsIgnoreCase("cavity")) {
             item.setCavity(currentValue);
-        }else if (localName.equalsIgnoreCase("comment")) {
+        } else if (localName.equalsIgnoreCase("comment")) {
             item.setComment(currentValue);
-        }else if (localName.equalsIgnoreCase("laxmicomment")) {
+        } else if (localName.equalsIgnoreCase("laxmicomment")) {
             item.setLaxmicomment(currentValue);
+        }else if (localName.equalsIgnoreCase("shape_color")) {
+            item.setShape_color(currentValue);
+        }else if (localName.equalsIgnoreCase("isfirstrow")) {
+            item.setIsfirstrow(currentValue);
+        }else if (localName.equalsIgnoreCase("isfancy")) {
+            item.setIsfancy(currentValue);
+        }else if (localName.equalsIgnoreCase("column1")) {
+            item.setColumn1(currentValue);
+        }else if (localName.equalsIgnoreCase("column2")) {
+            item.setColumn2(currentValue);
         } else if (localName.equalsIgnoreCase("record")) {
+            itemsList.add(item);
+        }else if (localName.equalsIgnoreCase("ROW")) {
             itemsList.add(item);
         }
 
